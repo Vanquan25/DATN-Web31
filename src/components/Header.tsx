@@ -62,6 +62,7 @@ const Header = (props: Props) => {
                                     <li>
                                         <a href="#"><i className="far fa-shopping-bag" /></a>
                                     </li>
+
                                 </ul>
                             </div>
                         </div>
