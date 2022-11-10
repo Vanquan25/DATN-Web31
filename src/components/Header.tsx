@@ -29,7 +29,7 @@ const Header = (props: Props) => {
                                         </ul>
                                     </li>
                                     <li className="has">
-                                        <a href="class.html">Gói Tập</a>
+                                        <Link to="./packagess">Gói Tập</Link>
                                     </li>
                                     <li className="has">
                                         <Link to="./ourtrainer">Huấn Luyện Viên</Link>
