@@ -857,55 +857,6 @@ const HomePage = (props: Props) => {
                 </div>
                 {/* blog-area end */}
             </main>
-            <div className="brand-area pt-70 pb-70">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xl-12">
-                            <div className="brand-slider">
-                                <div className="swiper-container">
-                                    <div className="swiper-wrapper">
-                                        <div className="swiper-slide single-slide">
-                                            <div className="brand-wrap">
-                                                <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide single-slide">
-                                            <div className="brand-wrap">
-                                                <img src="/src/templace/img/brand/brand-2.png" alt="brand" />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide single-slide">
-                                            <div className="brand-wrap">
-                                                <img src="/src/templace/img/brand/brand-3.png" alt="brand" />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide single-slide">
-                                            <div className="brand-wrap">
-                                                <img src="/src/templace/img/brand/brand-4.png" alt="brand" />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide single-slide">
-                                            <div className="brand-wrap">
-                                                <img src="/src/templace/img/brand/brand-5.png" alt="brand" />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide single-slide">
-                                            <div className="brand-wrap">
-                                                <img src="/src/templace/img/brand/brand-6.png" alt="brand" />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide single-slide">
-                                            <div className="brand-wrap">
-                                                <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
 
