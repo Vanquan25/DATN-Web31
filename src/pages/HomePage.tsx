@@ -32,7 +32,7 @@ const HomePage = (props: Props) => {
                                     <img src="/src/templace/img/thumb/thumb-3.png" alt="thumb" />
                                 </div>
                             </div>
-                            <div className="swiper-slide single-slide" data-background="/src/templace/img/slider/slider-2.jpg">
+                            <div className="swiper-slide single-slide" style={{ backgroundImage: "url('./src/templace/img/slider/slider-2.jpg')" }} >
                                 <div className="container">
                                     <div className="row mr-50">
                                         <div className="col-xl-10 col-lg-8">
@@ -478,8 +478,8 @@ const HomePage = (props: Props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="calculator-bg-1 bg-fix" data-background="/src/templace/img/bg/calculator-bg-1.jpg" />
-                    <div className="calculator-bg-2 bg-fix" data-background="/src/templace/img/bg/calculator-bg-2.jpg" />
+                    <div className="calculator-bg-1 bg-fix" style={{ backgroundImage: "url('./src/templace/img/bg/calculator-bg-1.jpg')" }} />
+                    <div className="calculator-bg-2 bg-fix" style={{ backgroundImage: "url('./src/templace/img/bg/calculator-bg-2.jpg')" }} />
                 </div>
                 {/* calculator-area end */}
                 {/* pricing-area start */}
@@ -552,7 +552,7 @@ const HomePage = (props: Props) => {
                 </div>
                 {/* pricing-area end */}
                 {/* testimonial-area start */}
-                <div className="testimonial-area-2 pt-130 pb-130" data-background="/src/templace/img/bg/testimonial-bg-2.jpg" data-overlay="black" data-opacity={8}>
+                <div className="testimonial-area-2 pt-130 pb-130" style={{ backgroundImage: "url('./src/templace/img/bg/testimonial-bg-2.jpg')" }} data-overlay="black" data-opacity={8}>
                     <div className="container position-relative">
                         <div className="row">
                             <div className="col-xl-12">
@@ -664,7 +664,7 @@ const HomePage = (props: Props) => {
                         </div>
                         <div className="row">
                             <div className="col-xl-4 col-md-6">
-                                <div className="blog-wrap mb-30" data-background="/src/templace/img/blog/blog-1.jpg">
+                                <div className="blog-wrap mb-30" style={{ backgroundImage: "url('./src/templace/img/blog/blog-1.jpg')" }} >
                                     <div className="blog-author mb-40">
                                         <div className="author-thumb">
                                             <img src="/src/templace/img/author/author-2.jpg" alt="Author" />
@@ -691,7 +691,7 @@ const HomePage = (props: Props) => {
                                 </div>
                             </div>
                             <div className="col-xl-4 col-md-6">
-                                <div className="blog-wrap mb-30" data-background="/src/templace/img/blog/blog-1.jpg">
+                                <div className="blog-wrap mb-30" style={{ backgroundImage: "url('./src/templace/img/blog/blog-1.jpg')" }}>
                                     <div className="blog-author mb-40">
                                         <div className="author-thumb">
                                             <img src="/src/templace/img/author/author-3.jpg" alt="Author" />
@@ -718,7 +718,7 @@ const HomePage = (props: Props) => {
                                 </div>
                             </div>
                             <div className="col-xl-4 col-md-6">
-                                <div className="blog-wrap mb-30" data-background="/src/templace/img/blog/blog-1.jpg">
+                                <div className="blog-wrap mb-30" style={{ backgroundImage: "url('./src/templace/img/blog/blog-1.jpg')" }}>
                                     <div className="blog-author mb-40">
                                         <div className="author-thumb">
                                             <img src="/src/templace/img/author/author-3.jpg" alt="Author" />
