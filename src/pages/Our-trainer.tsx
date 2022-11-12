@@ -43,16 +43,16 @@ const OurTrainer = (props: Props) => {
                                                 <div className="team-social-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                            <a href="#"><i className="bi bi-facebook"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-twitter" /></a>
+                                                            <a href="#"><i className="bi bi-twitter"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-instagram" /></a>
+                                                            <a href="#"><i className="bi bi-instagram"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-google" /></a>
+                                                            <a href="#"><i className="bi bi-google"></i></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -70,16 +70,16 @@ const OurTrainer = (props: Props) => {
                                                 <div className="team-social-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                            <a href="#"><i className="bi bi-facebook"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-twitter" /></a>
+                                                            <a href="#"><i className="bi bi-twitter"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-instagram" /></a>
+                                                            <a href="#"><i className="bi bi-instagram"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-google" /></a>
+                                                            <a href="#"><i className="bi bi-google"></i></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -97,16 +97,16 @@ const OurTrainer = (props: Props) => {
                                                 <div className="team-social-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                            <a href="#"><i className="bi bi-facebook"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-twitter" /></a>
+                                                            <a href="#"><i className="bi bi-twitter"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-instagram" /></a>
+                                                            <a href="#"><i className="bi bi-instagram"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-google" /></a>
+                                                            <a href="#"><i className="bi bi-google"></i></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -124,16 +124,16 @@ const OurTrainer = (props: Props) => {
                                                 <div className="team-social-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                            <a href="#"><i className="bi bi-facebook"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-twitter" /></a>
+                                                            <a href="#"><i className="bi bi-twitter"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-instagram" /></a>
+                                                            <a href="#"><i className="bi bi-instagram"></i></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i className="fab fa-google" /></a>
+                                                            <a href="#"><i className="bi bi-google"></i></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -151,7 +151,7 @@ const OurTrainer = (props: Props) => {
                     <div className="team-right mb-30">
                         <img src="/src/templace/img/team/team-5.jpg" alt="team" />
                         <div className="team-button">
-                            <a href="trainer.html" className="btn btn-gra">VIEW ALL TRAINER <i className="fas fa-angle-double-right" /></a>
+                            <a href="trainer.html" className="btn btn-gra">VIEW ALL TRAINER <i className="bi bi-fast-forward-fill"></i></a>
                         </div>
                     </div>
                     <div className="gray-bg" />
@@ -169,7 +169,7 @@ const OurTrainer = (props: Props) => {
                             </div>
                             <div className="col-xl-3 col-xl-3 text-xl-right text-lg-right text-center">
                                 <a href="trainer.html" className="btn btn-gra">
-                                    LEARN MORE <i className="fas fa-angle-double-right" />
+                                    LEARN MORE <i className="bi bi-fast-forward-fill"></i>
                                 </a>
                             </div>
                         </div>
@@ -185,16 +185,16 @@ const OurTrainer = (props: Props) => {
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                    <a href="#"><i className="bi bi-facebook"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-twitter" /></a>
+                                                    <a href="#"><i className="bi bi-twitter"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-instagram" /></a>
+                                                    <a href="#"><i className="bi bi-instagram"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-google" /></a>
+                                                    <a href="#"><i className="bi bi-google"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -212,16 +212,16 @@ const OurTrainer = (props: Props) => {
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                    <a href="#"><i className="bi bi-facebook"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-twitter" /></a>
+                                                    <a href="#"><i className="bi bi-twitter"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-instagram" /></a>
+                                                    <a href="#"><i className="bi bi-instagram"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-google" /></a>
+                                                    <a href="#"><i className="bi bi-google"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -239,16 +239,16 @@ const OurTrainer = (props: Props) => {
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                    <a href="#"><i className="bi bi-facebook"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-twitter" /></a>
+                                                    <a href="#"><i className="bi bi-twitter"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-instagram" /></a>
+                                                    <a href="#"><i className="bi bi-instagram"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-google" /></a>
+                                                    <a href="#"><i className="bi bi-google"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -266,16 +266,16 @@ const OurTrainer = (props: Props) => {
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                    <a href="#"><i className="bi bi-facebook"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-twitter" /></a>
+                                                    <a href="#"><i className="bi bi-twitter"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-instagram" /></a>
+                                                    <a href="#"><i className="bi bi-instagram"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-google" /></a>
+                                                    <a href="#"><i className="bi bi-google"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -307,13 +307,13 @@ const OurTrainer = (props: Props) => {
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                    <a href="#"><i className="bi bi-facebook"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-twitter" /></a>
+                                                    <a href="#"><i className="bi bi-twitter"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-instagram" /></a>
+                                                    <a href="#"><i className="bi bi-instagram"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -331,13 +331,13 @@ const OurTrainer = (props: Props) => {
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                    <a href="#"><i className="bi bi-facebook"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-twitter" /></a>
+                                                    <a href="#"><i className="bi bi-twitter"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-instagram" /></a>
+                                                    <a href="#"><i className="bi bi-instagram"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -355,13 +355,13 @@ const OurTrainer = (props: Props) => {
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-facebook-f" /></a>
+                                                    <a href="#"><i className="bi bi-facebook"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-twitter" /></a>
+                                                    <a href="#"><i className="bi bi-twitter"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-instagram" /></a>
+                                                    <a href="#"><i className="bi bi-instagram"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -372,65 +372,13 @@ const OurTrainer = (props: Props) => {
                                 <div className="join-our-team join-team-spacing mb-30">
                                     <h3>Join Our Team</h3>
                                     <a href="contact.html" className="btn">
-                                        join with us <i className="far fa-angle-double-right" />
+                                        join with us <i className="bi bi-fast-forward-fill"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* team-area-4 end */}
-                {/* brand-area start */}
-                <div className="brand-area pt-70 pb-70">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="brand-slider">
-                                    <div className="swiper-container">
-                                        <div className="swiper-wrapper">
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-2.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-3.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-4.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-5.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-6.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* brand-area end */}
             </main>
         </div>
 

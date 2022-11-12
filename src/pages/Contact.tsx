@@ -31,7 +31,7 @@ const Contact = (props: Props) => {
                             <div className="col-lg-4 col-md-6 d-flex">
                                 <div className="contact-info contact-info-2 justify-content-end">
                                     <div className="icon-box">
-                                        <i className="flaticon-whatsapp" />
+                                        <i className="bi bi-telephone"></i>
                                     </div>
                                     <div className="info-content">
                                         <h4>Contact me</h4>
@@ -42,7 +42,7 @@ const Contact = (props: Props) => {
                             <div className="col-lg-4 col-md-6 d-flex">
                                 <div className="contact-info contact-info-2 justify-content-end">
                                     <div className="icon-box">
-                                        <i className="flaticon-email" />
+                                        <i className="bi bi-envelope"></i>
                                     </div>
                                     <div className="info-content">
                                         <h4>Email us</h4>
@@ -53,7 +53,7 @@ const Contact = (props: Props) => {
                             <div className="col-lg-4 col-md-6 d-flex">
                                 <div className="contact-info contact-info-2 justify-content-end">
                                     <div className="icon-box">
-                                        <i className="flaticon-pin" />
+                                        <i className="bi bi-geo-alt-fill"></i>
                                     </div>
                                     <div className="info-content">
                                         <h4>Location</h4>
@@ -73,7 +73,7 @@ const Contact = (props: Props) => {
                                         rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                                     </p>
                                     <a href="#" className="read-more">
-                                        Get started <i className="fas fa-angle-double-right" />
+                                        Get started <i className="bi bi-fast-forward-fill"></i>
                                     </a>
                                 </div>
                             </div>
@@ -82,23 +82,23 @@ const Contact = (props: Props) => {
                                     <form action="#">
                                         <div className="row">
                                             <div className="col-xl-6">
-                                                <div className="input-wrap input-icon icon-name">
+                                                <div className="input-wrap">
                                                     <input type="text" placeholder="Full Name Here" />
                                                 </div>
                                             </div>
                                             <div className="col-xl-6">
-                                                <div className="input-wrap input-icon icon-email">
+                                                <div className="input-wrap">
                                                     <input type="text" placeholder="Email Address" />
                                                 </div>
                                             </div>
                                             <div className="col-xl-12">
-                                                <div className="input-wrap input-icon icon-msg">
+                                                <div className="input-wrap">
                                                     <textarea rows={5} placeholder="Write Message" spellCheck="false" defaultValue={""} />
                                                 </div>
                                             </div>
                                             <div className="col-xl-12">
                                                 <button type="submit" className="btn btn-gra">
-                                                    Send message <i className="fas fa-angle-double-right" />
+                                                    Send message <i className="bi bi-fast-forward-fill"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -113,65 +113,7 @@ const Contact = (props: Props) => {
                 <div className="map-area">
                     <div className="contact-map" id="contact-map" />
                 </div>
-                {/* map-area end */}
-                {/* brand-area start */}
-                <div className="brand-area pt-70 pb-70">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="brand-slider">
-                                    <div className="swiper-container">
-                                        <div className="swiper-wrapper">
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace
-                                                    /img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace
-                                                    /img/brand/brand-2.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace
-                                                    /img/brand/brand-3.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace
-                                                    /img/brand/brand-4.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace
-                                                    /img/brand/brand-5.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace
-                                                    /img/brand/brand-6.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace
-                                                    /img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* brand-area end */}
+
             </main>
         </div>
 

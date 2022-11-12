@@ -50,7 +50,7 @@ const PrincingPlan = (props: PrincingListProps) => {
                                             </p>
                                             <span className="price">{packages.price}</span>
                                             <a href={`packagess/packdetail/${packages.id}`} className="order-btn">
-                                                select plan <i className="fas fa-angle-double-right" />
+                                                select plan <i className="bi bi-fast-forward-fill"></i>
                                             </a>
                                             <div className="shape">
                                                 <img src="/src/templace/img/shape/shape-11.png" alt="shape" />
@@ -87,11 +87,11 @@ const PrincingPlan = (props: PrincingListProps) => {
                                         <div className="col-lg-4">
                                             <div className="pricing-list">
                                                 <ul>
-                                                    <li><i className="far fa-check-circle" /> Dummbelling Class</li>
-                                                    <li><i className="far fa-check-circle" /> Bonxing Training</li>
-                                                    <li><i className="far fa-check-circle" /> Classic Yoga Working</li>
-                                                    <li><i className="far fa-check-circle" /> Fashion Yoga &amp; GYM</li>
-                                                    <li><i className="far fa-check-circle" /> GYM &amp; Fitness</li>
+                                                    <li><i className="bi bi-check-circle"></i> Dummbelling Class</li>
+                                                    <li><i className="bi bi-check-circle"></i> Bonxing Training</li>
+                                                    <li><i className="bi bi-check-circle"></i> Classic Yoga Working</li>
+                                                    <li><i className="bi bi-check-circle"></i> Fashion Yoga &amp; GYM</li>
+                                                    <li><i className="bi bi-check-circle"></i> GYM &amp; Fitness</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -102,7 +102,7 @@ const PrincingPlan = (props: PrincingListProps) => {
                                                     doloremque laudantium totam
                                                 </p>
                                                 <a href="#" className="btn btn-gra mt-30">
-                                                    select plan <i className="fas fa-angle-double-right" />
+                                                    select plan <i className="bi bi-fast-forward-fill"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -119,11 +119,11 @@ const PrincingPlan = (props: PrincingListProps) => {
                                         <div className="col-lg-4">
                                             <div className="pricing-list">
                                                 <ul>
-                                                    <li><i className="far fa-check-circle" /> Dummbelling Class</li>
-                                                    <li><i className="far fa-check-circle" /> Bonxing Training</li>
-                                                    <li><i className="far fa-check-circle" /> Classic Yoga Working</li>
-                                                    <li><i className="far fa-check-circle" /> Fashion Yoga &amp; GYM</li>
-                                                    <li><i className="far fa-check-circle" /> GYM &amp; Fitness</li>
+                                                    <li><i className="bi bi-check-circle"></i> Dummbelling Class</li>
+                                                    <li><i className="bi bi-check-circle"></i> Bonxing Training</li>
+                                                    <li><i className="bi bi-check-circle"></i> Classic Yoga Working</li>
+                                                    <li><i className="bi bi-check-circle"></i> Fashion Yoga &amp; GYM</li>
+                                                    <li><i className="bi bi-check-circle"></i> GYM &amp; Fitness</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -134,7 +134,7 @@ const PrincingPlan = (props: PrincingListProps) => {
                                                     doloremque laudantium totam
                                                 </p>
                                                 <a href="#" className="btn btn-gra mt-30">
-                                                    select plan <i className="fas fa-angle-double-right" />
+                                                    select plan <i className="bi bi-fast-forward-fill"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -151,11 +151,11 @@ const PrincingPlan = (props: PrincingListProps) => {
                                         <div className="col-lg-4">
                                             <div className="pricing-list">
                                                 <ul>
-                                                    <li><i className="far fa-check-circle" /> Dummbelling Class</li>
-                                                    <li><i className="far fa-check-circle" /> Bonxing Training</li>
-                                                    <li><i className="far fa-check-circle" /> Classic Yoga Working</li>
-                                                    <li><i className="far fa-check-circle" /> Fashion Yoga &amp; GYM</li>
-                                                    <li><i className="far fa-check-circle" /> GYM &amp; Fitness</li>
+                                                    <li><i className="bi bi-check-circle"></i> Dummbelling Class</li>
+                                                    <li><i className="bi bi-check-circle"></i> Bonxing Training</li>
+                                                    <li><i className="bi bi-check-circle"></i> Classic Yoga Working</li>
+                                                    <li><i className="bi bi-check-circle"></i> Fashion Yoga &amp; GYM</li>
+                                                    <li><i className="bi bi-check-circle"></i> GYM &amp; Fitness</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -166,7 +166,7 @@ const PrincingPlan = (props: PrincingListProps) => {
                                                     doloremque laudantium totam
                                                 </p>
                                                 <a href="#" className="btn btn-gra mt-30">
-                                                    select plan <i className="fas fa-angle-double-right" />
+                                                    select plan <i className="bi bi-fast-forward-fill"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -176,56 +176,7 @@ const PrincingPlan = (props: PrincingListProps) => {
                         </div>
                     </div>
                 </div>
-                <div className="brand-area pt-70 pb-70">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="brand-slider">
-                                    <div className="swiper-container">
-                                        <div className="swiper-wrapper">
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-2.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-3.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-4.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-5.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-6.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* brand-area end */}
+
             </main>
         </div>
 

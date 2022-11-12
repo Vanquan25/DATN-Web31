@@ -20,8 +20,8 @@ const Header = (props: Props) => {
                                     <li className="has">
                                         <Link to="/">Trang Chủ</Link>
                                     </li>
-                                    <li className="has-dropdown">
-                                        <a href="#">Trang</a>
+                                    <li>
+                                        <a href="#">Trang <i className="bi bi-caret-down-fill"></i></a>
                                         <ul className="sub-menu">
                                             <li><a href="about.html">Thông Tin</a></li>
                                             <li><a href="bmi-calculator.html">Tính Chỉ Số IBM</a></li>
@@ -45,10 +45,10 @@ const Header = (props: Props) => {
                             <div className="attr-menu attr-white">
                                 <ul>
                                     <li>
-                                        <a href="#" className="open-search"><i className="far fa-search" /></a>
+                                        <a href="#"><i className="bi bi-search"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i className="far fa-shopping-bag" /></a>
+                                        <a href="#"><i className="bi bi-cart4"></i></a>
                                     </li>
                                 </ul>
                             </div>

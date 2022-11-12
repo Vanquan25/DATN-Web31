@@ -22,7 +22,7 @@ const HomePage = (props: Props) => {
                                                 </h2>
                                                 <a href="#" className="btn btn-gra" data-animation="fadeInUp" data-delay="0.9s">
                                                     Đến KHóa Học Ngay !
-                                                    <i className="fas fa-angle-double-right" />
+                                                    <i className="bi bi-caret-right-fill"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -57,8 +57,8 @@ const HomePage = (props: Props) => {
                         {/* If we need pagination */}
                         <div className="swiper-pagination" />
                         {/* If we need navigation buttons */}
-                        <div className="swiper-button-prev"><i className="far fa-angle-left" /></div>
-                        <div className="swiper-button-next"><i className="far fa-angle-right" /></div>
+                        <div className="swiper-button-prev"><i className="bi bi-arrow-left"></i></div>
+                        <div className="swiper-button-next"><i className="bi bi-arrow-right"></i></div>
                     </div>
                 </div>
                 {/* slider-area end */}
@@ -78,56 +78,44 @@ const HomePage = (props: Props) => {
                         <div className="row">
                             <div className="col-sm-6 col-md-4 w-xl-20">
                                 <div className="feature-wrap-2 bg-blue">
-                                    <div className="feature-icon">
-                                        <i className="flaticon-sports-and-competition" />
-                                    </div>
                                     <div className="feature-details">
                                         <h4>Máy Tập Hiện Đại</h4>
-                                        <a href="about.html" className="read-more">Xem Ngay <i className="fas fa-angle-double-right" /></a>
+                                        <a href="about.html" className="read-more">Xem Ngay <i className="bi bi-fast-forward-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-sm-6 col-md-4 w-xl-20">
                                 <div className="feature-wrap-2 bg-yellow">
-                                    <div className="feature-icon">
-                                        <i className="flaticon-leg" />
-                                    </div>
+
                                     <div className="feature-details">
                                         <h4>PT Tận Tâm</h4>
-                                        <a href="about.html" className="read-more">Xem Ngay <i className="fas fa-angle-double-right" /></a>
+                                        <a href="about.html" className="read-more">Xem Ngay <i className="bi bi-fast-forward-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-sm-6 col-md-4 w-xl-20">
                                 <div className="feature-wrap-2 bg-pink">
-                                    <div className="feature-icon">
-                                        <i className="flaticon-workout" />
-                                    </div>
+
                                     <div className="feature-details">
                                         <h4>Sức Khỏe</h4>
-                                        <a href="about.html" className="read-more">Xem Ngay <i className="fas fa-angle-double-right" /></a>
+                                        <a href="about.html" className="read-more">Xem Ngay <i className="bi bi-fast-forward-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-sm-6 col-md-4 w-xl-20">
                                 <div className="feature-wrap-2 bg-egg-blue">
-                                    <div className="feature-icon">
-                                        <i className="flaticon-fight" />
-                                    </div>
+
                                     <div className="feature-details">
                                         <h4>Boxing</h4>
-                                        <a href="about.html" className="read-more">Xem Ngay <i className="fas fa-angle-double-right" /></a>
+                                        <a href="about.html" className="read-more">Xem Ngay <i className="bi bi-fast-forward-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-sm-6 col-md-4 w-xl-20">
                                 <div className="feature-wrap-2 bg-purple">
-                                    <div className="feature-icon">
-                                        <i className="flaticon-abdominal" />
-                                    </div>
                                     <div className="feature-details">
                                         <h4>Dáng Đẹp</h4>
-                                        <a href="about.html" className="read-more">Xem Ngay <i className="fas fa-angle-double-right" /></a>
+                                        <a href="about.html" className="read-more">Xem Ngay <i className="bi bi-fast-forward-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +133,7 @@ const HomePage = (props: Props) => {
                                         <img src="/src/templace/img/thumb/thumb-4.jpg" alt="about" />
                                     </div>
                                     <a href="about.html" className="btn btn-gra">
-                                        Xem Ngay <i className="fas fa-angle-double-right" />
+                                        Xem Ngay <i className="bi bi-fast-forward-fill"></i>
                                     </a>
                                 </div>
                             </div>
@@ -170,96 +158,6 @@ const HomePage = (props: Props) => {
                         <img className="rotateme" src="/src/templace/img/shape/shape-5.png" alt="shape" />
                     </div>
                 </section>
-                {/* about-area-2 end */}
-                {/* service-area-2 start */}
-                <div className="service-area-2 bg-fix pt-130 pb-130" data-overlay="black" data-opacity={9} data-background="/src/templace/img/bg/service-bg.jpg">
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-xl-12 col-lg-12">
-                                <div className="section-title-2 bar-theme-color text-white text-center mb-60">
-                                    <h3>Các Gói Tập Độc Quền Về Sức Khỏe</h3>
-                                    <span>GYM</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="service-slider-2">
-                                    <div className="swiper-container">
-                                        <div className="swiper-wrapper">
-                                            <div className="swiper-slide single-slide">
-                                                <div className="service-wrap-2">
-                                                    <div className="service-img">
-                                                        <img src="/src/templace/img/service/service-5.jpg" alt="Services" />
-                                                    </div>
-                                                    <div className="service-content">
-                                                        <div className="icon">
-                                                            <i className="flaticon-gym-7" />
-                                                        </div>
-                                                        <h3>Luyện Tập Cadio</h3>
-                                                        <p>
-                                                            Việc sở hữu một thân hình đẹp trong quá trình tập gym thì chúng ta sẽ phải
-                                                            đảm bảo được các yêu cầu và một trong số đó là tập luyện, nhằm kích thích cho cơ bắp
-                                                        </p>
-                                                        <a href="service.html" className="read-more">
-                                                            <i className="fas fa-angle-double-right" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="service-wrap-2">
-                                                    <div className="service-img">
-                                                        <img src="/src/templace/img/service/service-6.jpg" alt="Services" />
-                                                    </div>
-                                                    <div className="service-content">
-                                                        <div className="icon">
-                                                            <i className="flaticon-gym-5" />
-                                                        </div>
-                                                        <h3>Luyện Tập Với Máy</h3>
-                                                        <p>
-                                                            Luyện tập với máy tập hiện đại sẽ đạt hiệu quả nhanh và khoa học hơn
-                                                        </p>
-                                                        <a href="service.html" className="read-more">
-                                                            <i className="fas fa-angle-double-right" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="service-wrap-2">
-                                                    <div className="service-img">
-                                                        <img src="/src/templace/img/service/service-7.jpg" alt="Services" />
-                                                    </div>
-                                                    <div className="service-content">
-                                                        <div className="icon">
-                                                            <i className="flaticon-workout-1" />
-                                                        </div>
-                                                        <h3>Tập Thể Lực</h3>
-                                                        <p>
-                                                            Thể lực tốt giúp ta khỏe mạnh và hiệu quả hơn trong các bài tập cơ bắp
-                                                        </p>
-                                                        <a href="service.html" className="read-more">
-                                                            <i className="fas fa-angle-double-right" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="service-shape-1">
-                        <img src="/src/templace/img/shape/shape-6.png" alt="shape" />
-                    </div>
-                    <div className="service-shape-2">
-                        <img src="/src/templace/img/shape/shape-7.png" alt="shape" />
-                    </div>
-                </div>
-                {/* service-area-2 end */}
-                {/* schedule-area-2 start */}
                 <div className="schedule-area-2 bg-black pt-130 pb-130">
                     <div className="container">
                         <div className="row">
@@ -572,7 +470,7 @@ const HomePage = (props: Props) => {
                                         </div>
                                         <div className="input-wrap">
                                             <a href="#" className="btn btn-gra">
-                                                Tính <i className="fas fa-angle-double-right" />
+                                                Tính <i className="bi bi-fast-forward-fill"></i>
                                             </a>
                                         </div>
                                     </form>
@@ -740,8 +638,8 @@ const HomePage = (props: Props) => {
                                         </div>
                                     </div>
                                     {/* If we need navigation buttons */}
-                                    <div className="swiper-button-prev"><i className="far fa-angle-double-left" /></div>
-                                    <div className="swiper-button-next"><i className="far fa-angle-double-right" /></div>
+                                    <div className="swiper-button-prev"><i className="bi bi-rewind-fill"></i></div>
+                                    <div className="swiper-button-next"><i className="bi bi-fast-forward-fill"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -787,7 +685,7 @@ const HomePage = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Dọc Ngay <i className="fas fa-angle-double-right" />
+                                            Dọc Ngay <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -814,7 +712,7 @@ const HomePage = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Dọc Ngay <i className="fas fa-angle-double-right" />
+                                            Dọc Ngay <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -841,7 +739,7 @@ const HomePage = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Đọc Ngay <i className="fas fa-angle-double-right" />
+                                            Đọc Ngay <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -856,8 +754,8 @@ const HomePage = (props: Props) => {
                     </div>
                 </div>
                 {/* blog-area end */}
-            </main>
-        </div>
+            </main >
+        </div >
 
 
 

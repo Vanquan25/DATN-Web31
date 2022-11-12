@@ -36,8 +36,8 @@ const Blog = (props: Props) => {
                                         </Link>
                                     </div>
                                     <div className="blog-meta">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content">
                                         <h3>
@@ -47,7 +47,7 @@ const Blog = (props: Props) => {
                                             </Link>
                                         </h3>
                                         <Link to="blogdetail" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </Link>
                                     </div>
                                 </div>
@@ -60,8 +60,8 @@ const Blog = (props: Props) => {
                                         </a>
                                     </div>
                                     <div className="blog-meta">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content">
                                         <h3>
@@ -70,7 +70,7 @@ const Blog = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -83,8 +83,8 @@ const Blog = (props: Props) => {
                                         </a>
                                     </div>
                                     <div className="blog-meta">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content">
                                         <h3>
@@ -94,7 +94,7 @@ const Blog = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -107,8 +107,8 @@ const Blog = (props: Props) => {
                                         </a>
                                     </div>
                                     <div className="blog-meta">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content">
                                         <h3>
@@ -118,7 +118,7 @@ const Blog = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -132,8 +132,8 @@ const Blog = (props: Props) => {
                                         </a>
                                     </div>
                                     <div className="blog-meta">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content">
                                         <h3>
@@ -142,7 +142,7 @@ const Blog = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -150,8 +150,8 @@ const Blog = (props: Props) => {
                             <div className="col-xl-4 col-md-6">
                                 <div className="blog-wrap-2 blog-wrap-spacing bg-gra mb-30">
                                     <div className="blog-meta text-white">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content text-white-2">
                                         <h3>
@@ -164,7 +164,7 @@ const Blog = (props: Props) => {
                                             But I must explain to you how all this mistaken idea denounc pleasure
                                         </p>
                                         <a href="blog-details.html" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -172,8 +172,8 @@ const Blog = (props: Props) => {
                             <div className="col-xl-4 col-md-6">
                                 <div className="blog-wrap-2 blog-wrap-spacing bg-dark mb-30">
                                     <div className="blog-meta text-white">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content text-white-2">
                                         <h3>
@@ -182,7 +182,7 @@ const Blog = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -195,8 +195,8 @@ const Blog = (props: Props) => {
                                         </a>
                                     </div>
                                     <div className="blog-meta">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content">
                                         <h3>
@@ -205,7 +205,7 @@ const Blog = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -218,8 +218,8 @@ const Blog = (props: Props) => {
                                         </a>
                                     </div>
                                     <div className="blog-meta">
-                                        <span><i className="fas fa-calendar-alt" /> 20 Jan 2020</span>
-                                        <span><i className="far fa-comments" /> Comments (1k)</span>
+                                        <span><i className="bi bi-calendar-check"></i> 20 Jan 2020</span>
+                                        <span><i className="bi bi-chat-dots"></i> Comments (1k)</span>
                                     </div>
                                     <div className="blog-content">
                                         <h3>
@@ -228,7 +228,7 @@ const Blog = (props: Props) => {
                                             </a>
                                         </h3>
                                         <a href="blog-details.html" className="read-more">
-                                            Read more <i className="fas fa-angle-double-right" />
+                                            Read more <i className="bi bi-fast-forward-fill"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -240,7 +240,7 @@ const Blog = (props: Props) => {
                                     <ul>
                                         <li>
                                             <a className="prev page-numbers" href="#">
-                                                <i className="fas fa-angle-double-left" />
+                                                <i className="bi bi-rewind-fill"></i>
                                             </a>
                                         </li>
                                         <li><span className="page-numbers current">01</span></li>
@@ -248,7 +248,7 @@ const Blog = (props: Props) => {
                                         <li><a className="page-numbers" href="blog.html">03</a></li>
                                         <li>
                                             <a className="next page-numbers" href="blog.html">
-                                                <i className="fas fa-angle-double-right" />
+                                                <i className="bi bi-fast-forward-fill"></i>
                                             </a>
                                         </li>
                                     </ul>
@@ -257,58 +257,6 @@ const Blog = (props: Props) => {
                         </div>
                     </div>
                 </div>
-                {/* team-area end */}
-                {/* brand-area start */}
-                <div className="brand-area pt-70 pb-70">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="brand-slider">
-                                    <div className="swiper-container">
-                                        <div className="swiper-wrapper">
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-2.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-3.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-4.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-5.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-6.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* brand-area end */}
             </main>
         </div>
 
