@@ -8,7 +8,7 @@ const OurTrainer = (props: Props) => {
         <div>
             <main>
                 {/*    breadcrumb-area start    */}
-                <section className="breadcrumb-area pt-180 pb-180 pt-md-120 pb-md-120 pt-xs-100 pb-xs-100 bg-fix" data-overlay="black" data-opacity={7} data-background="/src/templace/img/bg/breadcrumb-bg-3.jpg">
+                <section className="breadcrumb-area pt-180 pb-180 pt-md-120 pb-md-120 pt-xs-100 pb-xs-100 bg-fix" data-overlay="black" data-opacity={7} style={{ backgroundImage: "url('./src/templace/img/bg/breadcrumb-bg-3.jpg')" }}>
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-8 text-center">

@@ -11,7 +11,7 @@ const HomePage = (props: Props) => {
                     <div className="swiper-container home-slider-2">
                         {/* Additional required wrapper */}
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide single-slide" data-background="/src/templace/img/slider/slider-2.jpg">
+                            <div className="swiper-slide single-slide" style={{ backgroundImage: "url('./src/templace/img/slider/slider-2.jpg')" }} >
                                 <div className="container">
                                     <div className="row mr-50">
                                         <div className="col-xl-10 col-lg-8">
