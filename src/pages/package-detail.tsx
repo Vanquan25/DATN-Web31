@@ -48,11 +48,11 @@ const PackageDetail = (props: Props) => {
                                 <div className="product-details mt-lg-40 mt-md-40 mt-xs-40">
                                     <h3>{packages?.set_pt}</h3>
                                     <div className="product-rating">
-                                        <i className="fas fa-star" />
-                                        <i className="fas fa-star" />
-                                        <i className="fas fa-star" />
-                                        <i className="fas fa-star" />
-                                        <i className="fas fa-star" />
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-half"></i>
                                     </div>
                                     <span className="price">{packages?.price}</span>
                                     <p>
@@ -64,10 +64,10 @@ const PackageDetail = (props: Props) => {
                                         </div>
                                     </div>
                                     <div className="product-share">
-                                        <a href="#"><i className="fab fa-facebook-f" /></a>
-                                        <a href="#"><i className="fab fa-twitter" /></a>
-                                        <a href="#"><i className="fab fa-instagram" /></a>
-                                        <a href="#"><i className="fab fa-google-plus-g" /></a>
+                                        <a href="#"><i className="bi bi-facebook"></i></a>
+                                        <a href="#"><i className="bi bi-twitter"></i></a>
+                                        <a href="#"><i className="bi bi-instagram"></i></a>
+                                        <a href="#"><i className="bi bi-google"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@ const PackageDetail = (props: Props) => {
                                         <span>NEW</span>
                                     </div>
                                     <a href="shop-details.html" className="btn btn-gra">
-                                        Xem Ngay <i className="fas fa-angle-double-right" />
+                                        Xem Ngay <i className="bi bi-fast-forward-fill"></i>
                                     </a>
                                 </div>
                             </div>
@@ -193,7 +193,7 @@ const PackageDetail = (props: Props) => {
                                             </ul>
                                         </div>
                                         <div className="cart-btn">
-                                            <a href="shop-2.html" className="btn btn-gra">Xem Ngay <i className="fas fa-angle-double-right" /></a>
+                                            <a href="shop-2.html" className="btn btn-gra">Xem Ngay <i className="bi bi-fast-forward-fill"></i></a>
                                         </div>
                                     </div>
                                     <div className="product-content">
@@ -222,7 +222,7 @@ const PackageDetail = (props: Props) => {
                                             </ul>
                                         </div>
                                         <div className="cart-btn">
-                                            <a href="shop-2.html" className="btn btn-gra">Xem Ngay <i className="fas fa-angle-double-right" /></a>
+                                            <a href="shop-2.html" className="btn btn-gra">Xem Ngay <i className="bi bi-fast-forward-fill"></i></a>
                                         </div>
                                     </div>
                                     <div className="product-content">
@@ -251,7 +251,7 @@ const PackageDetail = (props: Props) => {
                                             </ul>
                                         </div>
                                         <div className="cart-btn">
-                                            <a href="shop-2.html" className="btn btn-gra">Xem Ngay <i className="fas fa-angle-double-right" /></a>
+                                            <a href="shop-2.html" className="btn btn-gra">Xem Ngay <i className="bi bi-fast-forward-fill"></i></a>
                                         </div>
                                     </div>
                                     <div className="product-content">

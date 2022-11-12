@@ -149,11 +149,11 @@ const TrainerDetail = (props: Props) => {
                                                             denouncing pleasure when uncover many web sites
                                                         </p>
                                                         <ul>
-                                                            <li><i className="fas fa-star" /></li>
-                                                            <li><i className="fas fa-star" /></li>
-                                                            <li><i className="fas fa-star" /></li>
-                                                            <li><i className="fas fa-star" /></li>
-                                                            <li><i className="fas fa-star-half-alt" /></li>
+                                                            <li><i className="bi bi-star-fill"></i></li>
+                                                            <li><i className="bi bi-star-fill"></i></li>
+                                                            <li><i className="bi bi-star-fill"></i></li>
+                                                            <li><i className="bi bi-star-fill"></i></li>
+                                                            <li><i className="bi bi-star-half"></i></li>
                                                         </ul>
                                                     </div>
                                                 </div>

@@ -71,10 +71,10 @@ const Footer = (props: Props) => {
                                         với từng thể trạng khác nhau và Gym T&amp;T sẽ giúp bạn hoàn thành mục tiêu đó.
                                     </p>
                                     <div className="social">
-                                        <a href="#"><i className="fab fa-facebook-f" /></a>
-                                        <a href="#"><i className="fab fa-twitter" /></a>
-                                        <a href="#"><i className="fab fa-instagram" /></a>
-                                        <a href="#"><i className="fab fa-google" /></a>
+                                        <a href="#"><i className="bi bi-facebook"></i></a>
+                                        <a href="#"><i className="bi bi-twitter"></i></a>
+                                        <a href="#"><i className="bi bi-instagram"></i></a>
+                                        <a href="#"><i className="bi bi-google"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -103,13 +103,13 @@ const Footer = (props: Props) => {
                                     <ul>
                                         <li>
                                             <a href="#&quot;&quot;">
-                                                <i className="fas fa-envelope" />
+                                                <i className="bi bi-envelope"></i>
                                                 <span>support@gmail.com</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i className="fas fa-phone" />
+                                                <i className="bi bi-telephone"></i>
                                                 <span>+012 (4567) 789</span>
                                             </a>
                                         </li>
@@ -131,7 +131,7 @@ const Footer = (props: Props) => {
                                             <input type="text" placeholder="Vui Lòng Nhập Email Của Bạn" />
                                         </div>
                                         <button className="btn btn-gra">
-                                            Gửi Thông Tin <i className="far fa-angle-double-right" />
+                                            Gửi Thông Tin <i className="bi bi-fast-forward-fill"></i>
                                         </button>
                                     </form>
                                 </div>
