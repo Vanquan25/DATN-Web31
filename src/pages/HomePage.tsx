@@ -25,13 +25,13 @@ const HomePage = (props: BMIProps) => {
       // Logic for message
       
       if (bmi < 18.5) {
-        setMessage("Under Weight");
+        setMessage("Thiếu Cân");
       } else if (bmi > 18.5 && bmi <= 24.9) {
-        setMessage("Healthy");
-      } else if (bmi > 24.9 && bmi < 30) {
-        setMessage("Overweight");
+        setMessage("Sức Khỏe Tốt");
+      } else if (bmi > 24.9 && bmi < 29.9) {
+        setMessage("Thừa Cân");
       } else {
-        setMessage("Obese");
+        setMessage("Béo Phì");
       }
     
     }
