@@ -1,5 +1,3 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
 import { PackagesType } from '../Type/Packages'
 
 type PrincingListProps = {
