@@ -10,6 +10,8 @@ import WebsiteLayout from "./pages/layouts/WebsiteLayout"
 import OurTrainer from "./pages/Our-trainer"
 import PackageDetail from "./pages/package-detail"
 import PrincingPlan from "./pages/Princing-plan"
+import Signin from "./pages/Signin"
+import Signup from "./pages/Signup"
 import TrainerDetail from "./pages/Trainer-detail"
 import { PackagesType } from "./Type/Packages"
 
@@ -36,6 +38,8 @@ function App() {
           <Route path="packagess" element={<PrincingPlan packagess={packagess} />} />
           <Route path="packagess/packdetail/:id" element={<PackageDetail />} />
           <Route path="cart/:id" element={<CartPage />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="signin" element={<Signin />} />
         </Route>
       </Routes>
     </div>
