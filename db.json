@@ -34,5 +34,37 @@
       "month": "2 thang",
       "status": "hoạt động 3 ngày trên 1 tuần nhé!! haha"
     }
+  ],
+  "users": [
+    {
+      "name": "Product AA",
+      "phone": "1111111111223",
+      "email": "quanlvph17984@gmail.com",
+      "password": "123456",
+      "confirm_password": "123456",
+      "gender": "11111111111",
+      "address": "Quoc Oai- Ha Noi",
+      "id": 1
+    },
+    {
+      "name": "abcd",
+      "phone": "1111111111223",
+      "email": "quanlvph2244@gmail.com",
+      "password": "123456",
+      "confirm_password": "123456",
+      "gender": "11111111111",
+      "address": "Quoc Oai- Ha Noi",
+      "id": 3
+    },
+    {
+      "name": "we16309",
+      "phone": "1111111111223",
+      "email": "minhquan22012@gmail.com",
+      "password": "123456",
+      "confirm_password": "123456",
+      "gender": "11111111111",
+      "address": "Quoc Oai- Ha Noi",
+      "id": 4
+    }
   ]
 }
