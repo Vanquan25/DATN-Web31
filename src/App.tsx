@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import toastr from 'toastr';
-import { listpack, readpack } from "./api/princing"
+import { addcontact, listcontact, removecontact, updatecontact } from "./api/contact";
+import { addpack, listpack, readpack, removepack, updatepack } from "./api/princing"
 import Blog from "./pages/Blog"
 import BlogDetail from "./pages/Blog-detail"
 import CartPage from "./pages/Cart-page"
@@ -20,30 +21,31 @@ import { addToCart, decreaseItemInCart, increaseItemInCart, removeItemInCart } f
 
 function App() {
   const [packagess, setPackagess] = useState<PackagesType[]>([])
+  const [contacts, setContacts] = useState<PackagesType[]>([])
   const [cart, setCart] = useState<PackagesType[]>([]);
-// Cart
-const onHandleAddToCart = async (id: number) => {
-  const { data } = await readpack(id)
-  addToCart({ ...data, quantity: 1 }, function () {
-    toastr.success(`Thêm ${data.name} vào giỏ hàng thành công!`)
-    setCart(JSON.parse(localStorage.getItem('cart') as string))
-  })
-}
-const onHandleIncreaseItemInCart = (id: number) => {
-  increaseItemInCart(id, () => {
-    setCart(JSON.parse(localStorage.getItem('cart') as string))
-  })
-}
-const onHandleDecreaseItemInCart = (id: number) => {
-  decreaseItemInCart(id, () => {
-    setCart(JSON.parse(localStorage.getItem('cart') as string))
-  })
-}
-const onHandleRemoveCart = (id: number) => {
-  removeItemInCart(id, () => {
-    setCart(JSON.parse(localStorage.getItem('cart') as string))
-  })
-}
+  // Cart
+  const onHandleAddToCart = async (id: number) => {
+    const { data } = await readpack(id)
+    addToCart({ ...data, quantity: 1 }, function () {
+      toastr.success(`Thêm ${data.name} vào giỏ hàng thành công!`)
+      setCart(JSON.parse(localStorage.getItem('cart') as string))
+    })
+  }
+  const onHandleIncreaseItemInCart = (id: number) => {
+    increaseItemInCart(id, () => {
+      setCart(JSON.parse(localStorage.getItem('cart') as string))
+    })
+  }
+  const onHandleDecreaseItemInCart = (id: number) => {
+    decreaseItemInCart(id, () => {
+      setCart(JSON.parse(localStorage.getItem('cart') as string))
+    })
+  }
+  const onHandleRemoveCart = (id: number) => {
+    removeItemInCart(id, () => {
+      setCart(JSON.parse(localStorage.getItem('cart') as string))
+    })
+  }
   useEffect(() => {
     const getPackagess = async () => {
       const { data } = await listpack();

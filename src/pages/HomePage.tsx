@@ -2,28 +2,28 @@ import { useState } from "react";
 import { BMI } from "../Type/BMI";
 
 type BMIProps = {
-    
+
 };
 
 const HomePage = (props: BMIProps) => {
-    
+
   const [weight, setWeight] = useState(0)
   const [height, setHeight] = useState(0)
   const [bmi, setBmi] = useState('')
   const [message, setMessage] = useState('')
- 
-  let calcBmi = (event:any) => {
+
+  let calcBmi = (event: any) => {
     //prevent submitting to the server
     event.preventDefault()
- 
+
     if (weight === 0 || height === 0) {
       alert('Please enter a bmiid weight and height')
     } else {
       let bmi = (weight / (height * height) * 10000)
       setBmi(bmi.toFixed(1))
- 
+
       // Logic for message
-      
+
       if (bmi < 18.5) {
         setMessage("Thiếu Cân");
       } else if (bmi > 18.5 && bmi <= 24.9) {
@@ -33,15 +33,15 @@ const HomePage = (props: BMIProps) => {
       } else {
         setMessage("Béo Phì");
       }
-    
+
     }
   }
- 
- 
+
+
   let reload = () => {
     window.location.reload()
   }
- 
+
   return (
     <div>
       <main>
@@ -557,14 +557,14 @@ const HomePage = (props: BMIProps) => {
                     <div className="input-wrap">
                       <input
                         type="text"
-                        onChange={(e:any) => setHeight(e.target.value)}
+                        onChange={(e: any) => setHeight(e.target.value)}
                         placeholder="Chiều/cm"
                       />
                     </div>
                     <div className="input-wrap">
                       <input
                         type="text"
-                        onChange={(e:any) => setWeight(e.target.value)}
+                        onChange={(e: any) => setWeight(e.target.value)}
                         placeholder="Cân Nặng/kg"
                       />
                     </div>
@@ -579,8 +579,8 @@ const HomePage = (props: BMIProps) => {
                       <button >Calculate</button>
                       <button className='' onClick={reload} type='submit'>Reload</button>
                     </div>
-                    <h1>{bmi}</h1>
-                    <h2>{message}</h2>
+                    <h1 className="text-white">{bmi}</h1>
+                    <h2 className="text-white">{message}</h2>
                   </form>
                 </div>
               </div>
