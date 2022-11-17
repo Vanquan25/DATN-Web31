@@ -3,7 +3,10 @@ import { useParams } from 'react-router-dom'
 import { readpack } from '../api/princing'
 import { PackagesType } from '../Type/Packages'
 
-type Props = {}
+type Props = {
+    packagess: PackagesType[];
+    onAddToCart: (cart: any) => void;
+}
 
 const PackageDetail = (props: Props) => {
     const { id } = useParams();
@@ -46,7 +49,7 @@ const PackageDetail = (props: Props) => {
                             </div>
                             <div className="col-md-9 col-lg-8 col-xl-4">
                                 <div className="product-details mt-lg-40 mt-md-40 mt-xs-40">
-                                    <h3>{packages?.set_pt}</h3>
+                                    <h3>{packages?.name}</h3>
                                     <div className="product-rating">
                                         <i className="bi bi-star-fill"></i>
                                         <i className="bi bi-star-fill"></i>
@@ -60,7 +63,7 @@ const PackageDetail = (props: Props) => {
                                     </p>
                                     <div className="product-action-box mb-30">
                                         <div className="add-to-cart">
-                                            <a href={`/cart/${packages?.id}`} className="btn btn-gra">Đăng Ký Ngay</a>
+                                            <a href={`/cart/${packages?.id}`} className="btn btn-gra" onClick={() => props.onAddToCart(packages?.id)}>Đăng Ký Ngay</a>
                                         </div>
                                     </div>
                                     <div className="product-share">

@@ -2,10 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { readpack } from '../api/princing';
 import { PackagesType } from '../Type/Packages';
+import { currencyPrice } from '../ulltis/formatMoney';
 
-type Props = {}
+type Props = {
+    onIncreaseItemInCart: (id: number) => void
+    onDecreaseItemInCart: (id: number) => void
+    onRemoveCart: (id: number) => void
+}
 
 const CartPage = (props: Props) => {
+    let cart: any = [];
+    cart = JSON.parse(localStorage.getItem('cart') as string);
+    let total = 0
     const { id } = useParams();
     const [packages, setPackagess] = useState<PackagesType>();
 
@@ -22,43 +30,47 @@ const CartPage = (props: Props) => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-4 order-md-2 mb-4">
+
                         <h4 className=" d-flex justify-content-between align-items-center mb-3">
                             <span className="text-muted">Giỏ hàng</span>
                             <span className="badge badge-secondary badge-pill">1</span>
                         </h4>
-                        <ul className="list-group mb-3 sticky-top">
-                            <li className="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 className="my-0">{packages?.name}</h6>
-                                    <div>
-                                        <img src="https://thethaodonga.com/wp-content/uploads/2022/01/Sergi-Constance-4.jpg" width="70px" />
-                                    </div>
-                                    <div>
-                                        <small className="text-muted">{packages?.status}</small>
-                                    </div>
-                                    <div>
-                                        <div className="text-black">
-                                            <label htmlFor="firstName">Số lượng</label>
-                                            <input type="number" className="form-control" id="firstName" />
-                                            <div className="invalid-feedback"> Valid first name is required. </div>
+                        {cart && cart.map((item: any) => {
+                            return (
+                                <ul className="list-group mb-3 sticky-top">
+
+                                    <li className="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 className="my-0">{packages?.name}</h6>
+                                            <div>
+                                                <img src="https://thethaodonga.com/wp-content/uploads/2022/01/Sergi-Constance-4.jpg" width="70px" />
+                                            </div>
+                                            <div>
+                                                <small className="text-muted">{packages?.status}</small>
+                                            </div>
+                                            <div>
+                                                <div className="text-black">
+                                                    <button onClick={() => props.onIncreaseItemInCart(item._id)} className="btn increase border border-black p-2">+</button>
+                                                    <span className='px-2'>{item.quantity}</span>
+                                                    <button onClick={() => props.onDecreaseItemInCart(item._id)} className="btn decrease border border-black p-2">-</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span className="text-muted">{currencyPrice(`${item.price * item.quantity}`)}</span>
+                                    </li>
+                                    <div className="input-group">
+                                        <input type="text" className="form-control" placeholder="Mã giảm giá" />
+                                        <div className="input-group-append">
+                                            <button type="submit" className="btn btn-secondary">Áp dụng</button>
                                         </div>
                                     </div>
-                                </div>
-                                <span className="text-muted">{packages?.price}</span>
-                            </li>
-                            <li className="list-group-item d-flex justify-content-between">
-                                <span>Tổng tiền</span>
-                                <strong>$12</strong>
-                            </li>
-                        </ul>
-                        <form className="card p-2">
-                            <div className="input-group">
-                                <input type="text" className="form-control" placeholder="Mã giảm giá" />
-                                <div className="input-group-append">
-                                    <button type="submit" className="btn btn-secondary">Áp dụng</button>
-                                </div>
-                            </div>
-                        </form>
+                                    <li className="list-group-item d-flex justify-content-between">
+                                        <span>Tổng tiền</span>
+                                        <strong>{total += item.price * item.quantity}</strong>
+                                    </li>
+                                </ul>
+                            )
+                        })}
                     </div>
                     <div className="col-md-8 order-md-1">
                         <h4 className="mb-3">Hóa đơn gói tập</h4>
