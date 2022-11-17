@@ -14,6 +14,7 @@ import PrincingPlan from "./pages/Princing-plan"
 import Signin from "./pages/Signin"
 import Signup from "./pages/Signup"
 import TrainerDetail from "./pages/Trainer-detail"
+import { ContactType } from "./Type/Contact"
 import { PackagesType } from "./Type/Packages"
 import { addToCart, decreaseItemInCart, increaseItemInCart, removeItemInCart } from "./ulltis/cart"
 
@@ -38,7 +39,6 @@ const onHandleDecreaseItemInCart = (id: number) => {
     setCart(JSON.parse(localStorage.getItem('cart') as string))
   })
 }
-
 const onHandleRemoveCart = (id: number) => {
   removeItemInCart(id, () => {
     setCart(JSON.parse(localStorage.getItem('cart') as string))
@@ -51,6 +51,64 @@ const onHandleRemoveCart = (id: number) => {
     }
     getPackagess();
   }, [])
+  //delete packages
+  const onHandleremovePack = async (id: number) => {
+    if (window.confirm('Are you sure you want to remove  ?')) {
+      removepack(id)
+      setPackagess(packagess.filter(item => item.id !== id));
+    }
+  }
+  //add packages
+  const onhandlerAddPack = async (packages: PackagesType) => {
+    const { data } = await addpack(packages)
+    setPackagess([...packagess, data])
+    alert("More success!");
+  }
+  // update packages
+  const onHandlerUpdatePack = async (packages: PackagesType) => {
+    try {
+      const { data } = await updatepack(packages);
+      setPackagess(packagess.map(item => item.id === data.id ? data : item))
+      if (data) {
+        alert("Update successful!");
+      }
+    } catch (error) {
+    }
+  }
+
+  // Contact
+  useEffect(() => {
+    const getContacts = async () => {
+      const { data } = await listcontact();
+      setContacts(data);
+    }
+    getContacts();
+  }, [])
+  //delete contact
+  const onHandleremoveContact = async (id: number) => {
+    if (window.confirm('Are you sure you want to remove  ?')) {
+      removecontact(id)
+      setContacts(contacts.filter(item => item.id !== id));
+    }
+  }
+  // add contact
+  const onhandlerAddContact = async (contact: ContactType) => {
+    const { data } = await addcontact(contact)
+    setContacts([...contacts, data])
+    alert("Cảm ơn phản hồi của quý khách!");
+  }
+  // update contact
+  const onHandlerUpdateContact = async (contact: ContactType) => {
+    try {
+      const { data } = await updatecontact(contact);
+      setContacts(contacts.map(item => item.id === data.id ? data : item))
+      if (data) {
+        alert("Update successful!");
+      }
+    } catch (error) {
+    }
+  }
+
   return (
     <div className="App">
       <Routes>
@@ -60,7 +118,7 @@ const onHandleRemoveCart = (id: number) => {
           <Route path="ourtrainer/trainerdetail" element={<TrainerDetail />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/blogdetail" element={<BlogDetail />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="contact" element={<Contact onAddContact={onhandlerAddContact} />} />
           <Route path="packagess" element={<PrincingPlan packagess={packagess} />} />
           <Route path="packagess/packdetail/:id" element={<PackageDetail packagess={packagess} onAddToCart={onHandleAddToCart} />} />
           <Route path="cart/:id" element={<CartPage onRemoveCart={onHandleRemoveCart} onDecreaseItemInCart={onHandleDecreaseItemInCart} onIncreaseItemInCart={onHandleIncreaseItemInCart} />} />
