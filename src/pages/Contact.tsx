@@ -1,8 +1,26 @@
 import React from 'react'
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
-type Props = {}
+type Input = {
+    name: string;
+    email: string;
+    comment: string
+}
 
-const Contact = (props: Props) => {
+type AddContactProps = {
+    onAddContact: (contacts: Input) => void
+}
+
+const Contact = (props: AddContactProps) => {
+    const { register, handleSubmit, formState: { errors } } = useForm<Input>();
+    const navigate = useNavigate()
+
+    const onSubmit: SubmitHandler<Input> = (data) => {
+        props.onAddContact(data)
+        navigate('/')
+
+    }
     return (
         <div>
             <main>
@@ -78,21 +96,21 @@ const Contact = (props: Props) => {
                             </div>
                             <div className="col-md-6 col-lg-7">
                                 <div className="contact-form contact-form-2">
-                                    <form action="#">
+                                    <form onSubmit={handleSubmit(onSubmit)}>
                                         <div className="row">
                                             <div className="col-xl-6">
                                                 <div className="input-wrap">
-                                                    <input type="text" placeholder="Full Name Here" />
+                                                    <input type="text" {...register('name')} placeholder="Full Name Here" />
                                                 </div>
                                             </div>
                                             <div className="col-xl-6">
                                                 <div className="input-wrap">
-                                                    <input type="text" placeholder="Email Address" />
+                                                    <input type="text" {...register('email')} placeholder="Email Address" />
                                                 </div>
                                             </div>
                                             <div className="col-xl-12">
                                                 <div className="input-wrap">
-                                                    <textarea rows={5} placeholder="Write Message" spellCheck="false" defaultValue={""} />
+                                                    <textarea rows={5} {...register('comment')} placeholder="Write Message" spellCheck="false" defaultValue={""} />
                                                 </div>
                                             </div>
                                             <div className="col-xl-12">
