@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 type Input = {
     name: string;
@@ -12,13 +15,18 @@ type AddContactProps = {
     onAddContact: (contacts: Input) => void
 }
 
+
 const Contact = (props: AddContactProps) => {
     const { register, handleSubmit, formState: { errors } } = useForm<Input>();
     const navigate = useNavigate()
 
     const onSubmit: SubmitHandler<Input> = (data) => {
         props.onAddContact(data)
-        navigate('/')
+        toast.success("Cảm ơn phản hồi của quý khách!");
+
+        setTimeout(() => {
+            navigate('/')
+        }, 3000);
 
     }
     return (
@@ -130,7 +138,7 @@ const Contact = (props: AddContactProps) => {
                 <div className="map-area">
                     <div className="contact-map" id="contact-map" />
                 </div>
-
+                <ToastContainer />
             </main>
         </div>
 
