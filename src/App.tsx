@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import toastr from 'toastr';
+import { signup } from "./api/auth";
 import { addcontact, listcontact, removecontact, updatecontact } from "./api/contact";
 import { addpack, listpack, readpack, removepack, updatepack } from "./api/princing"
 import Blog from "./pages/Blog"
@@ -17,12 +18,14 @@ import Signup from "./pages/Signup"
 import TrainerDetail from "./pages/Trainer-detail"
 import { ContactType } from "./Type/Contact"
 import { PackagesType } from "./Type/Packages"
+import { User } from "./Type/User"
 import { addToCart, decreaseItemInCart, increaseItemInCart, removeItemInCart } from "./ulltis/cart"
 
 function App() {
   const [packagess, setPackagess] = useState<PackagesType[]>([])
   const [contacts, setContacts] = useState<PackagesType[]>([])
   const [cart, setCart] = useState<PackagesType[]>([]);
+  const [users, setusers] = useState<User[]>([]);
   // Cart
   const onHandleAddToCart = async (id: number) => {
     const { data } = await readpack(id)
@@ -111,6 +114,13 @@ function App() {
     }
   }
 
+  // User
+  const onSignup = async (user: User) => {
+    // console.log('User', user);
+    const { data } = await signup(user);
+    setusers([...users, data]);
+  }
+
   return (
     <div className="App">
       <Routes>
@@ -124,7 +134,7 @@ function App() {
           <Route path="packagess" element={<PrincingPlan packagess={packagess} />} />
           <Route path="packagess/packdetail/:id" element={<PackageDetail packagess={packagess} onAddToCart={onHandleAddToCart} />} />
           <Route path="cart/:id" element={<CartPage onRemoveCart={onHandleRemoveCart} onDecreaseItemInCart={onHandleDecreaseItemInCart} onIncreaseItemInCart={onHandleIncreaseItemInCart} />} />
-          <Route path="signup" element={<Signup />} />
+          <Route path="signup" element={<Signup onSignup={onSignup} />} />
           <Route path="signin" element={<Signin />} />
         </Route>
       </Routes>

@@ -7,7 +7,7 @@ const TrainerDetail = (props: Props) => {
         <div>
             <main>
                 {/*    breadcrumb-area start    */}
-                <section className="breadcrumb-area pt-180 pb-180 pt-md-120 pb-md-120 pt-xs-100 pb-xs-100 bg-fix" data-overlay="black" data-opacity={7}  style={{ backgroundImage: "url('./src/templace/img/bg/breadcrumb-bg-3.jpg')" }}>
+                <section className="breadcrumb-area pt-180 pb-180 pt-md-120 pb-md-120 pt-xs-100 pb-xs-100 bg-fix" data-overlay="black" data-opacity={7} style={{ backgroundImage: "url('./src/templace/img/bg/breadcrumb-bg-3.jpg')" }}>
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-8 text-center">
@@ -215,57 +215,6 @@ const TrainerDetail = (props: Props) => {
                                     {/* If we need navigation buttons */}
                                     <div className="swiper-button-prev"><i className="far fa-angle-double-left" /></div>
                                     <div className="swiper-button-next"><i className="far fa-angle-double-right" /></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* testimonial-area-2 end */}
-                {/* brand-area start */}
-                <div className="brand-area pt-70 pb-70">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="brand-slider">
-                                    <div className="swiper-container">
-                                        <div className="swiper-wrapper">
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-2.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-3.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-4.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-5.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-6.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                            <div className="swiper-slide single-slide">
-                                                <div className="brand-wrap">
-                                                    <img src="/src/templace/img/brand/brand-1.png" alt="brand" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

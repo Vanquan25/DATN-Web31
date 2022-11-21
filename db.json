@@ -14,9 +14,9 @@
     },
     {
       "id": 2,
-      "name": "Gói 30 ngày",
+      "name": "Gói 60 ngày",
       "subject_id": "Boxing",
-      "price": "1400",
+      "price": "2800",
       "price_sale": "1000",
       "set_pt": "Nguyen manh quan",
       "desc": "sasfada",
@@ -25,9 +25,9 @@
     },
     {
       "id": 3,
-      "name": "Gói 30 ngày",
+      "name": "Gói 90 ngày",
       "subject_id": "Boxing",
-      "price": "1400",
+      "price": "3200",
       "price_sale": "1000",
       "set_pt": "Nguyen manh quan",
       "desc": "sasfada",
@@ -66,5 +66,6 @@
       "address": "Quoc Oai- Ha Noi",
       "id": 4
     }
-  ]
+  ],
+  "Contacts": []
 }
