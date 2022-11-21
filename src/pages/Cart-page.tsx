@@ -1,16 +1,32 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { readCoachs } from '../api/coachs';
 import { readpack } from '../api/princing';
+import { PackageBill } from '../Type/BillPackage';
+import { CoachsType } from '../Type/Coachs';
 import { PackagesType } from '../Type/Packages';
 import { currencyPrice } from '../ulltis/formatMoney';
 
-type Props = {
+type CartProps = {
     onIncreaseItemInCart: (id: number) => void
     onDecreaseItemInCart: (id: number) => void
     onRemoveCart: (id: number) => void
+    selectPT: CoachsType[];
+
+    onAddPackagebill: (bill: PackageBill) => void
+    // PackageBill chưa thêm trường gì
+}
+type FormInputs = {
+    id:number,
+    name:string,
+    address:string,
+    phone:number,
+    email:string,
+    total : string | number,
 }
 
-const CartPage = (props: Props) => {
+const CartPage = (props: CartProps) => {
     let cart: any = [];
     cart = JSON.parse(localStorage.getItem('cart') as string);
     let total = 0
@@ -24,6 +40,14 @@ const CartPage = (props: Props) => {
         }
         getPackagess();
     }, [])
+    const { register, handleSubmit, formState: { errors } } = useForm<FormInputs>();
+    const navigate = useNavigate();
+    const onSubmit: SubmitHandler<FormInputs> = (data) => {
+        props.onAddPackagebill(data)
+        // navigate('https://sandbox.vnpayment.vn/paymentv2/Transaction/PaymentMethod.html?token=2fbb4de776684b33a9dabaab87172898')
+
+    }
+
     return (
         <div>
             <br />
@@ -73,12 +97,12 @@ const CartPage = (props: Props) => {
                         })}
                     </div>
                     <div className="col-md-8 order-md-1">
-                        <h4 className="mb-3">Hóa đơn gói tập</h4>
-                        <form className="needs-validation" noValidate>
+                        <h4 className="mb-3">Package Bill</h4>
+                        <form className="needs-validation" onSubmit={handleSubmit(onSubmit)}>
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="lastName">Họ và tên</label>
-                                    <input type="text" className="form-control" id="lastName" />
+                                    <input type="text" {...register('name')}  className="form-control" id="lastName" />
                                     <div className="invalid-feedback"> Valid last name is required. </div>
                                 </div>
                             </div>
@@ -88,96 +112,63 @@ const CartPage = (props: Props) => {
                                     <div className="input-group-prepend">
                                         <span className="input-group-text">@</span>
                                     </div>
-                                    <input type="text" className="form-control" id="username" />
+                                    <input type="text" className="form-control" {...register('email')}  id="username" />
                                     <div className="invalid-feedback" style={{ width: '100%' }}> Your username is required. </div>
                                 </div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="username">Địa chỉ</label>
                                 <div className="input-group">
-                                    <input type="text" className="form-control" id="username" />
+                                    <input type="text" {...register('address')}  className="form-control" id="username" />
                                     <div className="invalid-feedback" style={{ width: '100%' }}> Your username is required. </div>
                                 </div>
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="email">Số điện thoại<span className="text-muted" /></label>
-                                <input type="email" className="form-control" id="email" />
+                                <label htmlFor="number">Số điện thoại<span className="text-muted" /></label>
+                                <input type="number" {...register('phone')} className="form-control" id="number" />
                                 <div className="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
                             </div>
-                            <div className="row">
-                                <div className="col-md-5 mb-3">
-                                    <label htmlFor="country">Tỉnh/Thành phố</label>
-                                    <select className="custom-select d-block w-100" id="country" required>
-                                        <option >Lựa chọn...</option>
-                                        <option>Hà Nội</option>
-                                    </select>
-                                    <div className="invalid-feedback"> Please select a valid country. </div>
-                                </div>
-                                <div className="col-md-4 mb-3">
-                                    <label htmlFor="state">Quận/Huyện</label>
-                                    <select className="custom-select d-block w-100" id="state" required>
-                                        <option >Lựa chọn...</option>
-                                        <option>Mỹ Đình</option>
-                                        <option>Bắc Từ Liêm</option>
-                                        <option>Nam Từ Liêm</option>
-                                        <option>Thanh Xuân</option>
-                                        <option>Quốc Oai</option>
-                                    </select>
-                                    <div className="invalid-feedback"> Please provide a valid state. </div>
-                                </div>
-                            </div>
-                            <hr className="mb-4" />
-                            <div className="custom-control custom-checkbox">
-                                <input type="checkbox" className="custom-control-input" id="same-address" />
-                                <label className="custom-control-label" htmlFor="same-address">Địa chỉ giao hàng giống với địa chỉ thanh toán của tô</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <input type="checkbox" className="custom-control-input" id="save-info" />
-                                <label className="custom-control-label" htmlFor="save-info">Lưu thông tin này cho lần sau</label>
-                            </div>
-                            <hr className="mb-4" />
-                            <h4 className="mb-3">Payment</h4>
                             <div className="d-block my-3">
-                                <div className="custom-control custom-radio">
-                                    <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" defaultChecked required />
-                                    <label className="custom-control-label" htmlFor="credit">Thẻ tín dụng</label>
+                                <label htmlFor="pt">Có PT hay không ? <span className="text-muted" /></label>
+                                <div className='input-group'>
+                                    <input type="radio" id="truePT" name="PT" value="Có"required />
+                                    <label htmlFor="true">Có</label>
                                 </div>
-                                <div className="custom-control custom-radio">
-                                    <input id="debit" name="paymentMethod" type="radio" className="custom-control-input" required />
-                                    <label className="custom-control-label" htmlFor="debit">Thẻ ghi nợ</label>
-                                </div>
-                                <div className="custom-control custom-radio">
-                                    <input id="paypal" name="paymentMethod" type="radio" className="custom-control-input" required />
-                                    <label className="custom-control-label" htmlFor="paypal">Thanh toán tiền mặt</label>
+                                <div className='input-group'>
+                                    <input type="radio" id="falsePT" name="PT" value="Không" required/>
+                                    <label htmlFor="false">Không</label>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-md-6 mb-3">
-                                    <label htmlFor="cc-name">Tên trên thẻ</label>
-                                    <input type="text" className="form-control" id="cc-name" />
-                                    <small className="text-muted">Tên đầy đủ như hiển thị trên thẻ</small>
-                                    <div className="invalid-feedback"> Name on card is required </div>
+                            <select name="" id="">
+                            {props.selectPT?.map((Coachs) => {
+                            
+                                return (
+                                    
+                                <option value={Coachs.name}>{Coachs.name}</option>
+                                )
+                            })}
+                            </select>
+                            <div className="tong_tien">
+                                <input type="number" value={total} {...register('total')} id="" />
+                            </div>
+                            <div className="d-block my-3">
+                            <h4 className="mb-3">Payment</h4>
+                                <div className='input-group'>
+                                    <input type="radio" id="TTMM" name="PTTT" value="Có"required />
+                                    <label htmlFor="true">Thanh toán momo</label>
                                 </div>
-                                <div className="col-md-6 mb-3">
-                                    <label htmlFor="cc-number">Số thẻ tín dụng</label>
-                                    <input type="text" className="form-control" id="cc-number" />
-                                    <div className="invalid-feedback"> Credit card number is required </div>
+                                <div className='input-group'>
+                                    <input type="radio" id="TTTM" name="PTTT" value="Không" required/>
+                                    <label htmlFor="false">Thanh toán tiền mặt</label>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-md-3 mb-3">
-                                    <label htmlFor="cc-expiration">Hết hạn</label>
-                                    <input type="text" className="form-control" id="cc-expiration" />
-                                    <div className="invalid-feedback"> Expiration date required </div>
-                                </div>
-                                <div className="col-md-3 mb-3">
-                                    <label htmlFor="cc-cvv">CVV</label>
-                                    <input type="text" className="form-control" id="cc-cvv" />
-                                    <div className="invalid-feedback"> Security code required </div>
-                                </div>
-                            </div>
+
+                            
+                          
                             <hr className="mb-4" />
-                            <button className="btn btn-primary btn-lg btn-block" type="submit">Tiếp tục thanh toán</button>
+                            <button className="btn btn-primary btn-lg btn-block" onClick={()=>{
+                                
+                            }} type="submit">Tiếp tục thanh toán</button>
                         </form>
                     </div>
                 </div>

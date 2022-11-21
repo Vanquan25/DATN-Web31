@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import toastr from 'toastr';
+import { listCoachs } from "./api/coachs";
 import { signup } from "./api/auth";
 import { addcontact, listcontact, removecontact, updatecontact } from "./api/contact";
+import { addPackagebill } from "./api/packagebill";
 import { addpack, listpack, readpack, removepack, updatepack } from "./api/princing"
 import Blog from "./pages/Blog"
 import BlogDetail from "./pages/Blog-detail"
@@ -16,6 +18,8 @@ import PrincingPlan from "./pages/Princing-plan"
 import Signin from "./pages/Signin"
 import Signup from "./pages/Signup"
 import TrainerDetail from "./pages/Trainer-detail"
+import { PackageBill } from "./Type/BillPackage";
+import { CoachsType } from "./Type/Coachs";
 import { ContactType } from "./Type/Contact"
 import { PackagesType } from "./Type/Packages"
 import { User } from "./Type/User"
@@ -23,9 +27,29 @@ import { addToCart, decreaseItemInCart, increaseItemInCart, removeItemInCart } f
 
 function App() {
   const [packagess, setPackagess] = useState<PackagesType[]>([])
+  const [Coachs, setCoachs] = useState<CoachsType[]>([])
+  const [PackageBills, setPackageBill] = useState<PackageBill[]>([])
+  const [users, setusers] = useState<User[]>([]);
   const [contacts, setContacts] = useState<PackagesType[]>([])
   const [cart, setCart] = useState<PackagesType[]>([]);
-  const [users, setusers] = useState<User[]>([]);
+  //Coachs
+  useEffect(() => {
+    const getCoachs = async () => {
+      const { data } = await listCoachs();
+      console.log(data);
+      
+      setCoachs(data);
+    }
+    getCoachs();
+  }, [])
+  //package bill
+  const onHandleAddPackagebill = async (PackageBill: PackageBill) => {
+    const { data } = await addPackagebill(PackageBill)
+    setPackageBill([...PackageBills, data])
+    alert("More success!");
+  }
+
+  
   // Cart
   const onHandleAddToCart = async (id: number) => {
     const { data } = await readpack(id)
@@ -133,6 +157,7 @@ function App() {
           <Route path="contact" element={<Contact onAddContact={onhandlerAddContact} />} />
           <Route path="packagess" element={<PrincingPlan packagess={packagess} />} />
           <Route path="packagess/packdetail/:id" element={<PackageDetail packagess={packagess} onAddToCart={onHandleAddToCart} />} />
+          onIncreaseItemInCart={onHandleIncreaseItemInCart} selectPT={Coachs} onAddPackagebill={onHandleAddPackagebill}/>} />
           <Route path="cart/:id" element={<CartPage onRemoveCart={onHandleRemoveCart} onDecreaseItemInCart={onHandleDecreaseItemInCart} onIncreaseItemInCart={onHandleIncreaseItemInCart} />} />
           <Route path="signup" element={<Signup onSignup={onSignup} />} />
           <Route path="signin" element={<Signin />} />
