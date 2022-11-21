@@ -2,6 +2,7 @@ import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { signin } from '../api/auth';
+import { authenticated } from '../ulltis/localStorage';
 
 type TypeInputs = {
     name: string,
@@ -18,9 +19,13 @@ const Signin = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<TypeInputs>();
     const navigate = useNavigate();
 
-    const onSubmit: SubmitHandler<TypeInputs> = data => {
-        signin(data);
-        navigate("/");
+    const onSubmit: SubmitHandler<TypeInputs> = async data => {
+        const { data: user } = await signin(data);
+        // console.log(user);
+        // localstorage
+        authenticated(user, () => {
+            navigate('/');
+        })
     }
     return (
         <div>
@@ -36,7 +41,7 @@ const Signin = () => {
                                     <div className="col-md-6 col-lg-7 d-flex align-items-center">
                                         <div className="card-body p-4 p-lg-5 text-black">
                                             <form onSubmit={handleSubmit(onSubmit)}>
-                                                <h3 className="fw-normal mb-3 pb-3" style={{ letterSpacing: 1 }}>Register your account</h3>
+                                                <h3 className="fw-normal mb-3 pb-3" style={{ letterSpacing: 1 }}>Login to your account</h3>
                                                 <div className="form-outline mb-3">
                                                     <input type="email" {...register('email')} id="form2Example17" className="form-control form-control-lg" />
                                                     <label className="form-label" htmlFor="form2Example17">Email address</label>
@@ -51,7 +56,7 @@ const Signin = () => {
                                                     <button className="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                                                 </div>
                                                 <a className="small text-muted" href="#!">Forgot password?</a>
-                                                <p className="mb-4 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <a href="#!" style={{ color: '#393f81' }}>Register here</a></p>
+                                                <p className="mb-4 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <a href="/signup" style={{ color: '#393f81' }}>Register here</a></p>
                                             </form>
                                         </div>
                                     </div>

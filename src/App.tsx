@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import toastr from 'toastr';
 import { listCoachs } from "./api/coachs";
+import { signup } from "./api/auth";
 import { addcontact, listcontact, removecontact, updatecontact } from "./api/contact";
 import { addPackagebill } from "./api/packagebill";
 import { addpack, listpack, readpack, removepack, updatepack } from "./api/princing"
@@ -21,13 +22,14 @@ import { PackageBill } from "./Type/BillPackage";
 import { CoachsType } from "./Type/Coachs";
 import { ContactType } from "./Type/Contact"
 import { PackagesType } from "./Type/Packages"
+import { User } from "./Type/User"
 import { addToCart, decreaseItemInCart, increaseItemInCart, removeItemInCart } from "./ulltis/cart"
 
 function App() {
   const [packagess, setPackagess] = useState<PackagesType[]>([])
   const [Coachs, setCoachs] = useState<CoachsType[]>([])
   const [PackageBills, setPackageBill] = useState<PackageBill[]>([])
-
+  const [users, setusers] = useState<User[]>([]);
   const [contacts, setContacts] = useState<PackagesType[]>([])
   const [cart, setCart] = useState<PackagesType[]>([]);
   //Coachs
@@ -46,6 +48,8 @@ function App() {
     setPackageBill([...PackageBills, data])
     alert("More success!");
   }
+
+  
   // Cart
   const onHandleAddToCart = async (id: number) => {
     const { data } = await readpack(id)
@@ -134,6 +138,13 @@ function App() {
     }
   }
 
+  // User
+  const onSignup = async (user: User) => {
+    // console.log('User', user);
+    const { data } = await signup(user);
+    setusers([...users, data]);
+  }
+
   return (
     <div className="App">
       <Routes>
@@ -146,9 +157,9 @@ function App() {
           <Route path="contact" element={<Contact onAddContact={onhandlerAddContact} />} />
           <Route path="packagess" element={<PrincingPlan packagess={packagess} />} />
           <Route path="packagess/packdetail/:id" element={<PackageDetail packagess={packagess} onAddToCart={onHandleAddToCart} />} />
-          <Route path="cart/:id" element={<CartPage onRemoveCart={onHandleRemoveCart} onDecreaseItemInCart={onHandleDecreaseItemInCart} 
           onIncreaseItemInCart={onHandleIncreaseItemInCart} selectPT={Coachs} onAddPackagebill={onHandleAddPackagebill}/>} />
-          <Route path="signup" element={<Signup />} />
+          <Route path="cart/:id" element={<CartPage onRemoveCart={onHandleRemoveCart} onDecreaseItemInCart={onHandleDecreaseItemInCart} onIncreaseItemInCart={onHandleIncreaseItemInCart} />} />
+          <Route path="signup" element={<Signup onSignup={onSignup} />} />
           <Route path="signin" element={<Signin />} />
         </Route>
       </Routes>

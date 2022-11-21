@@ -1,6 +1,11 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { signup } from '../api/auth';
+import { User } from '../Type/User';
+
+type props = {
+    onSignup: (User: User) => void
+};
 
 type TypeInputs = {
     name: string,
@@ -13,7 +18,7 @@ type TypeInputs = {
     role: string,
 }
 
-const Signup = () => {
+const Signup = (props: props) => {
     const { register, handleSubmit, formState: { errors } } = useForm<TypeInputs>();
     const navigate = useNavigate();
 
@@ -86,7 +91,7 @@ const Signup = () => {
                                                     <button className="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                                                 </div>
                                                 <a className="small text-muted" href="#!">Forgot password?</a>
-                                                <p className="mb-4 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <a href="#!" style={{ color: '#393f81' }}>Register here</a></p>
+                                                <p className="mb-4 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <a href="/signin" style={{ color: '#393f81' }}>Login here</a></p>
                                             </form>
                                         </div>
                                     </div>
