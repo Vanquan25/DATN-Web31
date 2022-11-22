@@ -135,7 +135,7 @@ const CartPage = (props: CartProps) => {
                             <div className="d-block my-3">
                                 <label htmlFor="pt">Có PT hay không ? <span className="text-muted" /></label>
                                 <div className='input-group'>
-                                    <div><input type="checkbox" id="truePT" name="PT" value="có" required onClick={onHideShowClick} />
+                                    <div><input type="radio" id="truePT" name="PT" value="có" required onClick={onHideShowClick} />
                                         <p style={{ display: (isVisible) ? 'block' : 'none' }}>      <select name="" id="" className='mt-40'>
                                             {props.selectPT?.map((Coachs) => {
 
@@ -149,7 +149,7 @@ const CartPage = (props: CartProps) => {
                                     <label htmlFor="true">Có</label>
                                 </div>
                                 <div className='input-group'>
-                                    <div><input type="checkbox" id="falsePT" name="PT" value="Không" required />
+                                    <div><input type="radio" id="falsePT" name="PT" value="Không" required />
                                     </div>
                                     <label htmlFor="false">Không</label>
                                 </div>
