@@ -59,7 +59,7 @@ const Contact = (props: AddContactProps) => {
                                         <i className="bi bi-telephone"></i>
                                     </div>
                                     <div className="info-content">
-                                        <h4>Liên hệ với tôi</h4>
+                                        <h4>Liên hệ</h4>
                                         <span>+097 (718) 7559</span>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@ const Contact = (props: AddContactProps) => {
                                         <i className="bi bi-envelope"></i>
                                     </div>
                                     <div className="info-content">
-                                        <h4>Gửi email cho chúng tôi</h4>
+                                        <h4>Gửi email</h4>
                                         <span>suport@gmail.com</span>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ const Contact = (props: AddContactProps) => {
                                     </div>
                                     <div className="info-content">
                                         <h4>Địa điểm</h4>
-                                        <span>Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</span>
+                                        <span>Nam Từ Liêm, Hà Nội</span>
                                     </div>
                                 </div>
                             </div>
