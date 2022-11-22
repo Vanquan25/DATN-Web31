@@ -16,6 +16,10 @@
     {
       "id": 4,
       "name": "Hùng Bin"
+    },
+    {
+      "id": 0,
+      "name": "Không PT"
     }
   ],
   "PackageBill": [
@@ -60,6 +64,54 @@
       ],
       "total": "25200",
       "id": 4
+    },
+    {
+      "name": "lê đức dũng bịp",
+      "email": "dungbro@gmail.com",
+      "address": "thanh hóa",
+      "phone": "49481040104",
+      "calendar": [
+        "Thứ 5"
+      ],
+      "pt": "không",
+      "total": "25200",
+      "id": 5
+    },
+    {
+      "name": "dsagdage232173",
+      "email": "sdsdqrwqewqreq@gmail.com",
+      "address": "AEưDadD",
+      "phone": "3213123111",
+      "calendar": [
+        "Thứ 3"
+      ],
+      "pt": "không PT",
+      "total": "25200",
+      "id": 6
+    },
+    {
+      "name": "123445",
+      "email": "dsadad@gmail.com",
+      "address": "sdsaafa",
+      "phone": "2114206",
+      "calendar": [
+        "Thứ 7"
+      ],
+      "pt": "không PT",
+      "total": "25200",
+      "id": 7
+    },
+    {
+      "name": "adadadaadaf",
+      "email": "1@gmail.com",
+      "address": "dsadasf",
+      "phone": "2131244118",
+      "calendar": [
+        "Thứ 4"
+      ],
+      "total": "25200",
+      "pt": "Long Zhou",
+      "id": 8
     }
   ],
   "packagess": [

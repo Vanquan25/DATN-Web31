@@ -24,7 +24,8 @@ type FormInputs = {
     phone: number,
     email: string,
     total: string | number,
-    calendar:string
+    calendar: string,
+    pt : string
 }
 
 const CartPage = (props: CartProps) => {
@@ -47,10 +48,6 @@ const CartPage = (props: CartProps) => {
         props.onAddPackagebill(data)
         // navigate('https://sandbox.vnpayment.vn/paymentv2/Transaction/PaymentMethod.html?token=2fbb4de776684b33a9dabaab87172898')
 
-    }
-    const [isVisible, setVisible] = useState(false)
-    const onHideShowClick = () => {
-        setVisible(!isVisible)
     }
 
     return (
@@ -134,50 +131,40 @@ const CartPage = (props: CartProps) => {
                                 <div className="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
                             </div>
                             <div className="dropdown float-right">
-                                    <button className="btn btn-secondary dropdown-toggle" type="button" id="sampleDropdownMenu" data-toggle="dropdown">
-                                        Lịch tập
+                                <button className="btn btn-secondary dropdown-toggle" type="button" id="sampleDropdownMenu" data-toggle="dropdown">
+                                    Lịch tập
+                                </button>
+                                <div className="dropdown-menu">
+                                    <button className="dropdown-item" type="button">
+                                        <input type="checkbox" {...register('calendar')} value='Thứ 2' />Thứ 2
                                     </button>
-                                    <div className="dropdown-menu">
-                                        <button className="dropdown-item" type="button">
-                                            <input type="checkbox" {...register('calendar')} value='Thứ 2'/>Thứ 2
-                                        </button>
-                                        <button className="dropdown-item" type="button">
-                                            <input type="checkbox" {...register('calendar')}  value='Thứ 3'/>Thứ 3
-                                        </button>
-                                        <button className="dropdown-item" type="button">
-                                            <input type="checkbox"{...register('calendar')}  value='Thứ 4' />Thứ 4
-                                        </button>
-                                        <button className="dropdown-item" type="button">
-                                            <input type="checkbox" {...register('calendar')}  value='Thứ 5'/>Thứ 5
-                                        </button>
-                                        <button className="dropdown-item" type="button">
-                                            <input type="checkbox" {...register('calendar')}  value='Thứ 6'/>Thứ 6
-                                        </button>
-                                        <button className="dropdown-item" type="button">
-                                            <input type="checkbox" {...register('calendar')}  value='Thứ 7' />Thứ 7
-                                        </button>
-                                    </div>
+                                    <button className="dropdown-item" type="button">
+                                        <input type="checkbox" {...register('calendar')} value='Thứ 3' />Thứ 3
+                                    </button>
+                                    <button className="dropdown-item" type="button">
+                                        <input type="checkbox"{...register('calendar')} value='Thứ 4' />Thứ 4
+                                    </button>
+                                    <button className="dropdown-item" type="button">
+                                        <input type="checkbox" {...register('calendar')} value='Thứ 5' />Thứ 5
+                                    </button>
+                                    <button className="dropdown-item" type="button">
+                                        <input type="checkbox" {...register('calendar')} value='Thứ 6' />Thứ 6
+                                    </button>
+                                    <button className="dropdown-item" type="button">
+                                        <input type="checkbox" {...register('calendar')} value='Thứ 7' />Thứ 7
+                                    </button>
                                 </div>
+                            </div>
                             <div className="d-block my-3">
                                 <label htmlFor="pt">Có PT hay không ? <span className="text-muted" /></label>
                                 <div className='input-group'>
-                                    <div><input type="radio" id="truePT" name="PT" value="có" required onClick={onHideShowClick} />
-                                        <p style={{ display: (isVisible) ? 'block' : 'none' }}>      <select name="" id="" className='mt-40'>
-                                            {props.selectPT?.map((Coachs) => {
+                                    <select name="" id="" >
+                                        {props.selectPT?.map((Coachs) => {
 
-                                                return (
-
-                                                    <option value={Coachs.name}>{Coachs.name}</option>
-                                                )
-                                            })}
-                                        </select></p>
-                                    </div>
-                                    <label htmlFor="true">Có</label>
-                                </div>
-                                <div className='input-group'>
-                                    <div><input type="radio" id="falsePT" name="PT" value="Không" required />
-                                    </div>
-                                    <label htmlFor="false">Không</label>
+                                            return (
+                                                    <option value={Coachs.name} {...register('pt')}>{Coachs.name}</option>  
+                                            )
+                                        })}                                    </select>
                                 </div>
 
                             </div>
