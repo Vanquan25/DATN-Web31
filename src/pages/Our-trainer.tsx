@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { CoachsType } from '../Type/Coachs'
 
-type Props = {}
+type CoachListProps = {
+   Coachs:CoachsType[];
+}
 
-const OurTrainer = (props: Props) => {
+const OurTrainer = (props: CoachListProps) => {
     return (
         <div>
             <main>
@@ -174,13 +177,16 @@ const OurTrainer = (props: Props) => {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-xl-3 col-md-6">
-                                <div className="team-wrap-2 mb-30">
+                        {props.Coachs?.map((coaches, index) => {
+                            return(
+                            <div className="col-xl-3 col-md-6" key={index} >
+                           
+                                <div className="team-wrap-2 mb-30" >
                                     <div className="team-img">
                                         <img src="/src/templace/img/team/team.jpg" alt="Team" />
                                     </div>
                                     <div className="team-content">
-                                        <h3><a href="trainer-details.html">Howard C. Skinner</a></h3>
+                                        <h3><a href="trainer-details.html">{coaches.name}</a></h3>
                                         <span>Dumbbell Trainer</span>
                                         <div className="team-social-link">
                                             <ul>
@@ -200,89 +206,14 @@ const OurTrainer = (props: Props) => {
                                         </div>
                                     </div>
                                 </div>
+                           
+                          
+                          
                             </div>
-                            <div className="col-xl-3 col-md-6">
-                                <div className="team-wrap-2 mb-30">
-                                    <div className="team-img">
-                                        <img src="/src/templace/img/team/team-2.jpg" alt="img" />
-                                    </div>
-                                    <div className="team-content">
-                                        <h3><a href="trainer-details.html">Raymond L. Brown</a></h3>
-                                        <span>Boxing Trainer</span>
-                                        <div className="team-social-link">
-                                            <ul>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-facebook"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-twitter"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-instagram"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-google"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-md-6">
-                                <div className="team-wrap-2 mb-30">
-                                    <div className="team-img">
-                                        <img src="/src/templace/img/team/team-3.jpg" />
-                                    </div>
-                                    <div className="team-content">
-                                        <h3><a href="trainer-details.html">Charles T. McAllister</a></h3>
-                                        <span>Caradio Trainer</span>
-                                        <div className="team-social-link">
-                                            <ul>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-facebook"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-twitter"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-instagram"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-google"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-md-6">
-                                <div className="team-wrap-2 mb-30">
-                                    <div className="team-img">
-                                        <img src="/src/templace/img/team/team-4.jpg" />
-                                    </div>
-                                    <div className="team-content">
-                                        <h3><a href="trainer-details.html">Solomon K. Sawyers</a></h3>
-                                        <span>Beauty Trainer</span>
-                                        <div className="team-social-link">
-                                            <ul>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-facebook"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-twitter"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-instagram"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i className="bi bi-google"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            )
+                        })}
                         </div>
+                        
                     </div>
                     <div className="team-shape-1">
                         <img src="/src/templace/img/shape/shape-17.png" alt="shape" />
