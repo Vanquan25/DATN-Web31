@@ -149,7 +149,7 @@ function App() {
       <Routes>
         <Route path='/' element={< WebsiteLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="ourtrainer" element={<OurTrainer />} />
+          <Route path="ourtrainer" element={<OurTrainer Coachs={Coachs}/>} />
           <Route path="ourtrainer/trainerdetail" element={<TrainerDetail />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/blogdetail" element={<BlogDetail />} />
