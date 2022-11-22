@@ -132,6 +132,31 @@ const CartPage = (props: CartProps) => {
                                 <input type="number" {...register('phone')} className="form-control" id="number" />
                                 <div className="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
                             </div>
+                            <div className="dropdown float-right">
+                                    <button className="btn btn-secondary dropdown-toggle" type="button" id="sampleDropdownMenu" data-toggle="dropdown">
+                                        Lịch tập
+                                    </button>
+                                    <div className="dropdown-menu">
+                                        <button className="dropdown-item" type="button">
+                                            <input type="checkbox" />Thứ 2
+                                        </button>
+                                        <button className="dropdown-item" type="button">
+                                            <input type="checkbox" />Thứ 3
+                                        </button>
+                                        <button className="dropdown-item" type="button">
+                                            <input type="checkbox" />Thứ 4
+                                        </button>
+                                        <button className="dropdown-item" type="button">
+                                            <input type="checkbox" />Thứ 5
+                                        </button>
+                                        <button className="dropdown-item" type="button">
+                                            <input type="checkbox" />Thứ 6
+                                        </button>
+                                        <button className="dropdown-item" type="button">
+                                            <input type="checkbox" />Thứ 7
+                                        </button>
+                                    </div>
+                                </div>
                             <div className="d-block my-3">
                                 <label htmlFor="pt">Có PT hay không ? <span className="text-muted" /></label>
                                 <div className='input-group'>
@@ -153,6 +178,7 @@ const CartPage = (props: CartProps) => {
                                     </div>
                                     <label htmlFor="false">Không</label>
                                 </div>
+
                             </div>
 
                             <div className="tong_tien">
