@@ -18,12 +18,12 @@ type CartProps = {
     // PackageBill chưa thêm trường gì
 }
 type FormInputs = {
-    id:number,
-    name:string,
-    address:string,
-    phone:number,
-    email:string,
-    total : string | number,
+    id: number,
+    name: string,
+    address: string,
+    phone: number,
+    email: string,
+    total: string | number,
 }
 
 const CartPage = (props: CartProps) => {
@@ -46,6 +46,10 @@ const CartPage = (props: CartProps) => {
         props.onAddPackagebill(data)
         // navigate('https://sandbox.vnpayment.vn/paymentv2/Transaction/PaymentMethod.html?token=2fbb4de776684b33a9dabaab87172898')
 
+    }
+    const [isVisible, setVisible] = useState(false)
+    const onHideShowClick = () => {
+        setVisible(!isVisible)
     }
 
     return (
@@ -102,7 +106,7 @@ const CartPage = (props: CartProps) => {
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="lastName">Họ và tên</label>
-                                    <input type="text" {...register('name')}  className="form-control" id="lastName" />
+                                    <input type="text" {...register('name')} className="form-control" id="lastName" />
                                     <div className="invalid-feedback"> Valid last name is required. </div>
                                 </div>
                             </div>
@@ -112,14 +116,14 @@ const CartPage = (props: CartProps) => {
                                     <div className="input-group-prepend">
                                         <span className="input-group-text">@</span>
                                     </div>
-                                    <input type="text" className="form-control" {...register('email')}  id="username" />
+                                    <input type="text" className="form-control" {...register('email')} id="username" />
                                     <div className="invalid-feedback" style={{ width: '100%' }}> Your username is required. </div>
                                 </div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="username">Địa chỉ</label>
                                 <div className="input-group">
-                                    <input type="text" {...register('address')}  className="form-control" id="username" />
+                                    <input type="text" {...register('address')} className="form-control" id="username" />
                                     <div className="invalid-feedback" style={{ width: '100%' }}> Your username is required. </div>
                                 </div>
                             </div>
@@ -131,43 +135,46 @@ const CartPage = (props: CartProps) => {
                             <div className="d-block my-3">
                                 <label htmlFor="pt">Có PT hay không ? <span className="text-muted" /></label>
                                 <div className='input-group'>
-                                    <input type="radio" id="truePT" name="PT" value="Có"required />
+                                    <div><input type="checkbox" id="truePT" name="PT" value="có" required onClick={onHideShowClick} />
+                                        <p style={{ display: (isVisible) ? 'block' : 'none' }}>      <select name="" id="" className='mt-40'>
+                                            {props.selectPT?.map((Coachs) => {
+
+                                                return (
+
+                                                    <option value={Coachs.name}>{Coachs.name}</option>
+                                                )
+                                            })}
+                                        </select></p>
+                                    </div>
                                     <label htmlFor="true">Có</label>
                                 </div>
                                 <div className='input-group'>
-                                    <input type="radio" id="falsePT" name="PT" value="Không" required/>
+                                    <div><input type="checkbox" id="falsePT" name="PT" value="Không" required />
+                                    </div>
                                     <label htmlFor="false">Không</label>
                                 </div>
                             </div>
-                            <select name="" id="">
-                            {props.selectPT?.map((Coachs) => {
-                            
-                                return (
-                                    
-                                <option value={Coachs.name}>{Coachs.name}</option>
-                                )
-                            })}
-                            </select>
+
                             <div className="tong_tien">
                                 <input type="number" value={total} {...register('total')} id="" />
                             </div>
                             <div className="d-block my-3">
-                            <h4 className="mb-3">Payment</h4>
+                                <h4 className="mb-3">Payment</h4>
                                 <div className='input-group'>
-                                    <input type="radio" id="TTMM" name="PTTT" value="Có"required />
+                                    <input type="radio" id="TTMM" name="PTTT" value="Có" required />
                                     <label htmlFor="true">Thanh toán momo</label>
                                 </div>
                                 <div className='input-group'>
-                                    <input type="radio" id="TTTM" name="PTTT" value="Không" required/>
+                                    <input type="radio" id="TTTM" name="PTTT" value="Không" required />
                                     <label htmlFor="false">Thanh toán tiền mặt</label>
                                 </div>
                             </div>
 
-                            
-                          
+
+
                             <hr className="mb-4" />
-                            <button className="btn btn-primary btn-lg btn-block" onClick={()=>{
-                                
+                            <button className="btn btn-primary btn-lg btn-block" onClick={() => {
+
                             }} type="submit">Tiếp tục thanh toán</button>
                         </form>
                     </div>
@@ -180,3 +187,7 @@ const CartPage = (props: CartProps) => {
 }
 
 export default CartPage
+
+function setShowResults(arg0: boolean) {
+    throw new Error('Function not implemented.');
+}
