@@ -34,7 +34,7 @@ const OurTrainer = (props: CoachListProps) => {
                             <div className="col-xl-8">
                                 <div className="section-title-2 bar-theme-color mb-25">
                                     <h3>
-                                        We Have Expert Team Member Meet Our Trainer
+                                    Chúng tôi có thành viên nhóm chuyên gia gặp gỡ huấn luyện viên của chúng tôi
                                     </h3>
                                     <span>Team</span>
                                 </div>
@@ -62,7 +62,7 @@ const OurTrainer = (props: CoachListProps) => {
                                             </div>
                                             <div className="team-content">
                                                 <h3><Link to='trainerdetail'>Howard C. Skinner</Link></h3>
-                                                <span>Dumbbell Trainer</span>
+                                                <span>Huấn luyện viên tạ</span>
                                             </div>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@ const OurTrainer = (props: CoachListProps) => {
                                             </div>
                                             <div className="team-content">
                                                 <h3><a href="trainer-details.html">Raymond L. Brown</a></h3>
-                                                <span>Boxing Trainer</span>
+                                                <span>Huấn luyện viên đấm bốc</span>
                                             </div>
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@ const OurTrainer = (props: CoachListProps) => {
                                             </div>
                                             <div className="team-content">
                                                 <h3><a href="trainer-details.html">Charles T. McAllister</a></h3>
-                                                <span>Caradio Trainer</span>
+                                                <span>Huấn luyện viên ca-ra-đi-ô</span>
                                             </div>
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@ const OurTrainer = (props: CoachListProps) => {
                                             </div>
                                             <div className="team-content">
                                                 <h3><a href="trainer-details.html">Solomon K. Sawyers</a></h3>
-                                                <span>Beauty Trainer</span>
+                                                <span>Huấn luyện viên sắc đẹp</span>
                                             </div>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@ const OurTrainer = (props: CoachListProps) => {
                     <div className="team-right mb-30">
                         <img src="/src/templace/img/team/team-5.jpg" alt="team" />
                         <div className="team-button">
-                            <a href="trainer.html" className="btn btn-gra">VIEW ALL TRAINER <i className="bi bi-fast-forward-fill"></i></a>
+                            <a href="trainer.html" className="btn btn-gra">XEM TẤT CẢ <i className="bi bi-fast-forward-fill"></i></a>
                         </div>
                     </div>
                     <div className="gray-bg" />
@@ -166,13 +166,13 @@ const OurTrainer = (props: CoachListProps) => {
                         <div className="row align-items-center mb-60">
                             <div className="col-xl-9">
                                 <div className="section-title-2 bar-theme-color team-title-2">
-                                    <h3>We Have Expert Team Member Meet Our Trainer</h3>
+                                    <h3>Chúng tôi có thành viên nhóm chuyên gia gặp gỡ huấn luyện viên của chúng tôi</h3>
                                     <span>Team</span>
                                 </div>
                             </div>
                             <div className="col-xl-3 col-xl-3 text-xl-right text-lg-right text-center">
                                 <a href="trainer.html" className="btn btn-gra">
-                                    LEARN MORE <i className="bi bi-fast-forward-fill"></i>
+                                   Tìm hiểu thêm <i className="bi bi-fast-forward-fill"></i>
                                 </a>
                             </div>
                         </div>
@@ -187,7 +187,7 @@ const OurTrainer = (props: CoachListProps) => {
                                     </div>
                                     <div className="team-content">
                                         <h3><a href="trainer-details.html">{coaches.name}</a></h3>
-                                        <span>Dumbbell Trainer</span>
+                                        <span>Huấn luyện viên tạ</span>
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
@@ -234,7 +234,8 @@ const OurTrainer = (props: CoachListProps) => {
                                     </div>
                                     <div className="team-content">
                                         <h3><a href="trainer-details.html">Howard C. Skinner</a></h3>
-                                        <span>Dumbbell Trainer</span>
+                                        <span>Huấn luyện viên tạ</span>
+                                        <span></span>
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
@@ -258,7 +259,7 @@ const OurTrainer = (props: CoachListProps) => {
                                     </div>
                                     <div className="team-content">
                                         <h3><a href="trainer-details.html">Raymond L. Brown</a></h3>
-                                        <span>Boxing Trainer</span>
+                                        <span>Huấn luyện viên Boxing</span>
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
@@ -282,7 +283,7 @@ const OurTrainer = (props: CoachListProps) => {
                                     </div>
                                     <div className="team-content">
                                         <h3><a href="trainer-details.html">Charles T. McAllister</a></h3>
-                                        <span>Caradio Trainer</span>
+                                        <span>Huấn luyện viên ca-ra-đi-ô</span>
                                         <div className="team-social-link">
                                             <ul>
                                                 <li>
@@ -301,9 +302,9 @@ const OurTrainer = (props: CoachListProps) => {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="join-our-team join-team-spacing mb-30">
-                                    <h3>Join Our Team</h3>
+                                    <h3>Gia nhập đội ngũ của chúng tôi</h3>
                                     <a href="contact.html" className="btn">
-                                        join with us <i className="bi bi-fast-forward-fill"></i>
+                                        Tham gia với chúng tôi <i className="bi bi-fast-forward-fill"></i>
                                     </a>
                                 </div>
                             </div>

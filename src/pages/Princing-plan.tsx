@@ -14,10 +14,10 @@ const PrincingPlan = (props: PrincingListProps) => {
                         <div className="row justify-content-center">
                             <div className="col-lg-8 text-center">
                                 <div className="breadcrumb-content">
-                                    <h3 className="title">Pricing Plan</h3>
+                                    <h3 className="title">Kế Hoạch Giá Cả</h3>
                                     <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li className="active">Pricing Plan</li>
+                                        <li><a href="index.html">Trang chủ</a></li>
+                                        <li className="active">Kế Hoạch Giá Cả</li>
                                     </ul>
                                 </div>
                             </div>
@@ -31,9 +31,9 @@ const PrincingPlan = (props: PrincingListProps) => {
                             <div className="col-xl-12">
                                 <div className="section-title-2 bar-theme-color text-center mb-35">
                                     <h3>
-                                        We Provide A Comfortable Pricing Plan For Our Satisfied Clients
+                                    Chúng tôi cung cấp một gói giá thoải mái cho khách hàng hài lòng của chúng tôi
                                     </h3>
-                                    <span>Pricing</span>
+                                    <span>Gía</span>
                                 </div>
                             </div>
                         </div>
@@ -66,9 +66,9 @@ const PrincingPlan = (props: PrincingListProps) => {
                             <div className="col-xl-12">
                                 <div className="section-title-2 bar-theme-color text-center mb-35">
                                     <h3>
-                                        We Provide A Comfortable Pricing Plan For Our Satisfied Clients
+                                    Chúng tôi cung cấp một gói giá thoải mái cho khách hàng hài lòng của chúng tôi
                                     </h3>
-                                    <span>Pricing</span>
+                                    <span>Gía</span>
                                 </div>
                             </div>
                         </div>
@@ -78,18 +78,18 @@ const PrincingPlan = (props: PrincingListProps) => {
                                     <div className="row no-gutters align-items-center">
                                         <div className="col-lg-4">
                                             <div className="pricing-title">
-                                                <h3>Basic Plan</h3>
+                                                <h3>Kế hoạch cơ bản</h3>
                                                 <span>45.99 <sup>$</sup></span>
                                             </div>
                                         </div>
                                         <div className="col-lg-4">
                                             <div className="pricing-list">
                                                 <ul>
-                                                    <li><i className="bi bi-check-circle"></i> Dummbelling Class</li>
-                                                    <li><i className="bi bi-check-circle"></i> Bonxing Training</li>
-                                                    <li><i className="bi bi-check-circle"></i> Classic Yoga Working</li>
-                                                    <li><i className="bi bi-check-circle"></i> Fashion Yoga &amp; GYM</li>
-                                                    <li><i className="bi bi-check-circle"></i> GYM &amp; Fitness</li>
+                                                    <li><i className="bi bi-check-circle"></i> lớp tập tạ</li>
+                                                    <li><i className="bi bi-check-circle"></i> đào tạo boxing</li>
+                                                    <li><i className="bi bi-check-circle"></i> Yoga cổ điển</li>
+                                                    <li><i className="bi bi-check-circle"></i> Thời trang Yoga&amp; GYM</li>
+                                                    <li><i className="bi bi-check-circle"></i> Phòng tập &amp; thể dục</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -100,7 +100,7 @@ const PrincingPlan = (props: PrincingListProps) => {
                                                     doloremque laudantium totam
                                                 </p>
                                                 <a href="#" className="btn btn-gra mt-30">
-                                                    select plan <i className="bi bi-fast-forward-fill"></i>
+                                                    chọn kế hoạch <i className="bi bi-fast-forward-fill"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -110,18 +110,18 @@ const PrincingPlan = (props: PrincingListProps) => {
                                     <div className="row no-gutters align-items-center">
                                         <div className="col-lg-4">
                                             <div className="pricing-title">
-                                                <h3>Pro Plan</h3>
+                                                <h3>Kế hoạch chuyên nghiệp</h3>
                                                 <span>95.99 <sup>$</sup></span>
                                             </div>
                                         </div>
                                         <div className="col-lg-4">
                                             <div className="pricing-list">
-                                                <ul>
-                                                    <li><i className="bi bi-check-circle"></i> Dummbelling Class</li>
-                                                    <li><i className="bi bi-check-circle"></i> Bonxing Training</li>
-                                                    <li><i className="bi bi-check-circle"></i> Classic Yoga Working</li>
-                                                    <li><i className="bi bi-check-circle"></i> Fashion Yoga &amp; GYM</li>
-                                                    <li><i className="bi bi-check-circle"></i> GYM &amp; Fitness</li>
+                                            <ul>
+                                                    <li><i className="bi bi-check-circle"></i> lớp tập tạ</li>
+                                                    <li><i className="bi bi-check-circle"></i> đào tạo boxing</li>
+                                                    <li><i className="bi bi-check-circle"></i> Yoga cổ điển</li>
+                                                    <li><i className="bi bi-check-circle"></i> Thời trang Yoga&amp; GYM</li>
+                                                    <li><i className="bi bi-check-circle"></i> Phòng tập &amp; thể dục</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -132,7 +132,7 @@ const PrincingPlan = (props: PrincingListProps) => {
                                                     doloremque laudantium totam
                                                 </p>
                                                 <a href="#" className="btn btn-gra mt-30">
-                                                    select plan <i className="bi bi-fast-forward-fill"></i>
+                                                   Chọn kế hoạch <i className="bi bi-fast-forward-fill"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -142,18 +142,18 @@ const PrincingPlan = (props: PrincingListProps) => {
                                     <div className="row no-gutters align-items-center">
                                         <div className="col-lg-4">
                                             <div className="pricing-title">
-                                                <h3>Gold Plan</h3>
+                                                <h3>Kế hoạch vàng</h3>
                                                 <span>205.99 <sup>$</sup></span>
                                             </div>
                                         </div>
                                         <div className="col-lg-4">
                                             <div className="pricing-list">
                                                 <ul>
-                                                    <li><i className="bi bi-check-circle"></i> Dummbelling Class</li>
-                                                    <li><i className="bi bi-check-circle"></i> Bonxing Training</li>
-                                                    <li><i className="bi bi-check-circle"></i> Classic Yoga Working</li>
-                                                    <li><i className="bi bi-check-circle"></i> Fashion Yoga &amp; GYM</li>
-                                                    <li><i className="bi bi-check-circle"></i> GYM &amp; Fitness</li>
+                                                    <li><i className="bi bi-check-circle"></i> lớp tập tạ</li>
+                                                    <li><i className="bi bi-check-circle"></i> đào tạo boxing</li>
+                                                    <li><i className="bi bi-check-circle"></i> Yoga cổ điển</li>
+                                                    <li><i className="bi bi-check-circle"></i> Thời trang Yoga&amp; GYM</li>
+                                                    <li><i className="bi bi-check-circle"></i> Phòng tập &amp; thể dục</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -164,7 +164,7 @@ const PrincingPlan = (props: PrincingListProps) => {
                                                     doloremque laudantium totam
                                                 </p>
                                                 <a href="#" className="btn btn-gra mt-30">
-                                                    select plan <i className="bi bi-fast-forward-fill"></i>
+                                                    Chọn kế hoạch <i className="bi bi-fast-forward-fill"></i>
                                                 </a>
                                             </div>
                                         </div>

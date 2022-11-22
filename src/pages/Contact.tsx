@@ -59,8 +59,8 @@ const Contact = (props: AddContactProps) => {
                                         <i className="bi bi-telephone"></i>
                                     </div>
                                     <div className="info-content">
-                                        <h4>Contact me</h4>
-                                        <span>+012 (345) 6789</span>
+                                        <h4>Liên hệ với tôi</h4>
+                                        <span>+097 (718) 7559</span>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ const Contact = (props: AddContactProps) => {
                                         <i className="bi bi-envelope"></i>
                                     </div>
                                     <div className="info-content">
-                                        <h4>Email us</h4>
+                                        <h4>Gửi email cho chúng tôi</h4>
                                         <span>suport@gmail.com</span>
                                     </div>
                                 </div>
@@ -81,8 +81,8 @@ const Contact = (props: AddContactProps) => {
                                         <i className="bi bi-geo-alt-fill"></i>
                                     </div>
                                     <div className="info-content">
-                                        <h4>Location</h4>
-                                        <span>670 New Road, USA</span>
+                                        <h4>Địa điểm</h4>
+                                        <span>Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</span>
                                     </div>
                                 </div>
                             </div>
@@ -91,14 +91,14 @@ const Contact = (props: AddContactProps) => {
                             <div className="col-md-6 col-lg-5">
                                 <div className="contact-text text-left">
                                     <div className="section-title-2 bar-theme-color contact-title">
-                                        <h3>Feel Feel Don't Hesitate To Contact With Us Or Email Us</h3>
+                                        <h3>Đừng ngần ngại hãy liên hệ với chúng tôi hoặc gửi email cho chúng tôi</h3>
                                     </div>
                                     <p>
                                         Sed ut perspiciatis unde omnis iste natus erro sit voluptatem accusantium dolorem datotamc
                                         rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                                     </p>
                                     <a href="#" className="read-more">
-                                        Get started <i className="bi bi-fast-forward-fill"></i>
+                                        Bắt Đầu <i className="bi bi-fast-forward-fill"></i>
                                     </a>
                                 </div>
                             </div>
@@ -108,22 +108,22 @@ const Contact = (props: AddContactProps) => {
                                         <div className="row">
                                             <div className="col-xl-6">
                                                 <div className="input-wrap">
-                                                    <input type="text" {...register('name')} placeholder="Full Name Here" />
+                                                    <input type="text" {...register('name')} placeholder="Tên đầy đủ ở đây" />
                                                 </div>
                                             </div>
                                             <div className="col-xl-6">
                                                 <div className="input-wrap">
-                                                    <input type="text" {...register('email')} placeholder="Email Address" />
+                                                    <input type="text" {...register('email')} placeholder="Địa chỉ email" />
                                                 </div>
                                             </div>
                                             <div className="col-xl-12">
                                                 <div className="input-wrap">
-                                                    <textarea rows={5} {...register('comment')} placeholder="Write Message" spellCheck="false" defaultValue={""} />
+                                                    <textarea rows={5} {...register('comment')} placeholder="Viết tin nhắn" spellCheck="false" defaultValue={""} />
                                                 </div>
                                             </div>
                                             <div className="col-xl-12">
                                                 <button type="submit" className="btn btn-gra">
-                                                    Send message <i className="bi bi-fast-forward-fill"></i>
+                                                    Gửi tin nhắn <i className="bi bi-fast-forward-fill"></i>
                                                 </button>
                                             </div>
                                         </div>
