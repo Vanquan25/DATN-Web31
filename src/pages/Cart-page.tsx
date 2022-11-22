@@ -24,6 +24,7 @@ type FormInputs = {
     phone: number,
     email: string,
     total: string | number,
+    calendar:string
 }
 
 const CartPage = (props: CartProps) => {
@@ -138,22 +139,22 @@ const CartPage = (props: CartProps) => {
                                     </button>
                                     <div className="dropdown-menu">
                                         <button className="dropdown-item" type="button">
-                                            <input type="checkbox" />Thứ 2
+                                            <input type="checkbox" {...register('calendar')} value='Thứ 2'/>Thứ 2
                                         </button>
                                         <button className="dropdown-item" type="button">
-                                            <input type="checkbox" />Thứ 3
+                                            <input type="checkbox" {...register('calendar')}  value='Thứ 3'/>Thứ 3
                                         </button>
                                         <button className="dropdown-item" type="button">
-                                            <input type="checkbox" />Thứ 4
+                                            <input type="checkbox"{...register('calendar')}  value='Thứ 4' />Thứ 4
                                         </button>
                                         <button className="dropdown-item" type="button">
-                                            <input type="checkbox" />Thứ 5
+                                            <input type="checkbox" {...register('calendar')}  value='Thứ 5'/>Thứ 5
                                         </button>
                                         <button className="dropdown-item" type="button">
-                                            <input type="checkbox" />Thứ 6
+                                            <input type="checkbox" {...register('calendar')}  value='Thứ 6'/>Thứ 6
                                         </button>
                                         <button className="dropdown-item" type="button">
-                                            <input type="checkbox" />Thứ 7
+                                            <input type="checkbox" {...register('calendar')}  value='Thứ 7' />Thứ 7
                                         </button>
                                     </div>
                                 </div>
