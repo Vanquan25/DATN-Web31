@@ -18,14 +18,17 @@ type CartProps = {
     // PackageBill chưa thêm trường gì
 }
 type FormInputs = {
-    id: number,
-    name: string,
-    address: string,
-    phone: number,
-    email: string,
-    total: string | number,
+    id:number,
+    name:string,
+    address:string,
+    phone:number,
+    email:string,
+    total : string | number,
+    date_start: Date,
+    seletPT:string,
     calendar: string,
     pt : string
+
 }
 
 const CartPage = (props: CartProps) => {
@@ -156,7 +159,7 @@ const CartPage = (props: CartProps) => {
                                 </div>
                             </div>
                             <div className="d-block my-3">
-                                <label htmlFor="pt">Có PT hay không ? <span className="text-muted" /></label>
+                                <label htmlFor="pt"> Huấn Luyện Viên <span className="text-muted" /></label>
                                 <div className='input-group'>
                                     <select name="" id="" >
                                         {props.selectPT?.map((Coachs) => {
@@ -168,9 +171,31 @@ const CartPage = (props: CartProps) => {
                                 </div>
 
                             </div>
+                            <h4 className="mb-3">Huấn Luyện Viên</h4>
+                            
+                            <select name="" id="">
+                            {props.selectPT?.map((Coachs) => {
+                            
+                                return (
+                                    
+                                <option value={Coachs.name}  {...register('seletPT')}>{Coachs.name}</option>
+                                )
+                            })}
+                            </select>
+                            <div className="selectDay">
+                            <h4 className="mb-3">Chọn Ngày</h4>
+                                <div id="datepicker" className="input-group date" data-date-format="dd-mm-yyyy">
+                                    <input type="text" className='' {...register('date_start')}  id="datepicker"  />
+                                     <span className="input-group-addon ">
+                                        <i className="glyphicon glyphicon-calendar" ></i>
+                                    </span> 
+                                </div>
+                            </div>
 
                             <div className="tong_tien">
-                                <input type="number" value={total} {...register('total')} id="" />
+                                <h4 className="mb-3" >Tổng Tiền : </h4>
+                                <input type="text" {...register('total')} value={total}/>
+
                             </div>
                             <div className="d-block my-3">
                                 <h4 className="mb-3">Payment</h4>
