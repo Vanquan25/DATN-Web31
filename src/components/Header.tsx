@@ -11,7 +11,7 @@ const Header = (props: Props) => {
                     <div className="row align-items-center justify-content-xl-center">
                         <div className="col-xl-2 col-lg-3 col-md-3 col-6">
                             <div className="logo-area">
-                                <a href="index.html"><img src="/src/templace/img/logo/logo-white.png" alt="Logo" /></a>
+                                <a href="/"><img src="/src/templace/img/logo/logo-white.png" alt="Logo" /></a>
                             </div>
                         </div>
                         <div className="col-xl-8 d-xl-flex justify-content-center align-items-center d-none">

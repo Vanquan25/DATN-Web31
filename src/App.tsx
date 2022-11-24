@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom"
+import { toast, ToastContainer } from "react-toastify";
 import toastr from 'toastr';
 import { signup } from "./api/auth";
 import { listCoachs } from "./api/coachs";
@@ -30,7 +31,7 @@ function App() {
   const [Coachs, setCoachs] = useState<CoachsType[]>([])
   const [PackageBills, setPackageBill] = useState<PackageBill[]>([])
 
-  const [contacts, setContacts] = useState<PackagesType[]>([])
+  const [contacts, setContacts] = useState<ContactType[]>([])
   const [cart, setCart] = useState<PackagesType[]>([]);
   const [users, setusers] = useState<User[]>([]);
   //Coachs
@@ -38,7 +39,7 @@ function App() {
     const getCoachs = async () => {
       const { data } = await listCoachs();
       console.log(data);
-      
+
       setCoachs(data);
     }
     getCoachs();
@@ -77,7 +78,7 @@ function App() {
       const { data } = await listpack();
       setPackagess(data);
     }
-getPackagess();
+    getPackagess();
   }, [])
   //delete packages
   const onHandleremovePack = async (id: number) => {
@@ -123,7 +124,8 @@ getPackagess();
   const onhandlerAddContact = async (contact: ContactType) => {
     const { data } = await addcontact(contact)
     setContacts([...contacts, data])
-    alert("Cảm ơn phản hồi của quý khách!");
+
+    // alert("Cảm ơn phản hồi của quý khách!");
   }
   // update contact
   const onHandlerUpdateContact = async (contact: ContactType) => {
@@ -147,19 +149,20 @@ getPackagess();
       <Routes>
         <Route path='/' element={< WebsiteLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="ourtrainer" element={<OurTrainer />} />
+          <Route path="ourtrainer" element={<OurTrainer Coachs={Coachs}/>} />
           <Route path="ourtrainer/trainerdetail" element={<TrainerDetail />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/blogdetail" element={<BlogDetail />} />
           <Route path="contact" element={<Contact onAddContact={onhandlerAddContact} />} />
           <Route path="packagess" element={<PrincingPlan packagess={packagess} />} />
           <Route path="packagess/packdetail/:id" element={<PackageDetail packagess={packagess} onAddToCart={onHandleAddToCart} />} />
-          <Route path="cart/:id" element={<CartPage onRemoveCart={onHandleRemoveCart} onDecreaseItemInCart={onHandleDecreaseItemInCart} 
-          onIncreaseItemInCart={onHandleIncreaseItemInCart} selectPT={Coachs} onAddPackagebill={onHandleAddPackagebill}/>} />
-          <Route path="signup" element={<Signup  onSignup={onSignup} />} />
+          <Route path="cart/:id" element={<CartPage onRemoveCart={onHandleRemoveCart} onDecreaseItemInCart={onHandleDecreaseItemInCart}
+            onIncreaseItemInCart={onHandleIncreaseItemInCart} selectPT={Coachs} onAddPackagebill={onHandleAddPackagebill} />} />
+          <Route path="signup" element={<Signup onSignup={onSignup} />} />
           <Route path="signin" element={<Signin />} />
         </Route>
       </Routes>
+      <ToastContainer />
     </div>
   )
 }
